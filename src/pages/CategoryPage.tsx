@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useLocation, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Filter, SortAsc, SortDesc } from 'lucide-react';
@@ -7,8 +7,6 @@ import { RewardsPanel } from '../components/RewardsPanel';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
 import { Product } from '../types';
-
-const [useState] = React;
 
 const categoryMapping: Record<string, Product['category']> = {
   '/flights': 'Flights',
