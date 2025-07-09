@@ -5,7 +5,9 @@ import { HomePage } from './pages/HomePage';
 import { CategoryPage } from './pages/CategoryPage';
 import { CartPage } from './pages/CartPage';
 import { AccountPage } from './pages/AccountPage';
+import { AdminDashboard } from './pages/AdminDashboard';
 import { useTheme } from './hooks/useTheme';
+import { Toaster } from 'sonner';
 
 function App() {
   const { isDarkMode } = useTheme();
@@ -29,6 +31,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/account" element={<AccountPage />} />
+            <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/flights" element={<CategoryPage />} />
             <Route path="/electronics" element={<CategoryPage />} />
             <Route path="/hotels" element={<CategoryPage />} />
@@ -38,6 +41,11 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+        <Toaster 
+          position="top-right"
+          theme={isDarkMode ? 'dark' : 'light'}
+          richColors
+        />
       </div>
     </Router>
   );

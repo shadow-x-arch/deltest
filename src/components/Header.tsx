@@ -5,7 +5,6 @@ import {
   ShoppingBag,
   ShoppingCart as CartIcon,
   Award, 
-  Plus, 
   Moon, 
   Sun, 
   Menu, 
@@ -20,7 +19,6 @@ import {
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
-import { ProductForm } from './ProductForm';
 
 const categories = [
   { name: 'Flights', path: '/flights', icon: Plane },
@@ -35,7 +33,6 @@ export const Header: React.FC = () => {
   const { user, activeDiscount, getCartTotal } = useStore();
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
-  const [showForm, setShowForm] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const { totalItems } = getCartTotal();
@@ -87,12 +84,10 @@ export const Header: React.FC = () => {
                 );
               })}
             </nav>
-
-            {/* Right Side Actions */}
-            <div className="flex items-center gap-4">
-              {/* Miles Display */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
+            <Link
+              to="/admin"
+              onClick={() => setShowMobileMenu(false)}
+              className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg cursor-pointer ${
                 isDarkMode
                   ? 'bg-gray-800 text-amber-400'
@@ -117,14 +112,13 @@ export const Header: React.FC = () => {
                 </motion.div>
               )}
 
-              {/* Add Product Button */}
-              <button
-                onClick={() => setShowForm(true)}
-                className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              {/* Admin Button */}
+              <Link
+                to="/admin"
+                className="hidden md:flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
               >
-                <Plus className="w-4 h-4" />
-                Add Product
-              </button>
+                Admin
+              </Link>
 
               {/* Cart Button */}
               <Link
@@ -191,9 +185,8 @@ export const Header: React.FC = () => {
                 isDarkMode ? 'border-gray-700' : 'border-gray-200'
               }`}
             >
-              <div className="grid grid-cols-2 gap-2 mb-4">
-                {categories.map((category) => {
-                  const Icon = category.icon;
+              Admin Dashboard
+            </Link>
                   const isActive = location.pathname === category.path;
                   return (
                     <Link
@@ -228,8 +221,6 @@ export const Header: React.FC = () => {
           )}
         </div>
       </header>
-
-      <ProductForm isOpen={showForm} onClose={() => setShowForm(false)} />
     </>
   );
 };
