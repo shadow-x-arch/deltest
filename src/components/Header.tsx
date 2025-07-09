@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ShoppingBag,
+  Shield,
   Moon, 
   Sun, 
   Menu, 
@@ -15,6 +16,7 @@ import {
   Coffee,
   User
 } from 'lucide-react';
+import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
 
 const categories = [
@@ -27,6 +29,7 @@ const categories = [
 ];
 
 export const Header: React.FC = () => {
+  const { isAdminAuthenticated } = useStore();
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -82,6 +85,23 @@ export const Header: React.FC = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center gap-4">
+
+              {/* Admin Login Button */}
+              <Link
+                to="/admin"
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                  isAdminAuthenticated
+                    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400'
+                    : isDarkMode
+                    ? 'hover:bg-gray-800 text-gray-300'
+                    : 'hover:bg-gray-100 text-gray-600'
+                }`}
+              >
+                <Shield className="w-4 h-4" />
+                <span className="text-sm font-medium">
+                  {isAdminAuthenticated ? 'Admin' : 'Login'}
+                </span>
+              </Link>
 
               {/* Dashboard Button */}
               <Link

@@ -6,12 +6,16 @@ import { demoProducts, bonusRewards } from '../data/demoData';
 interface StoreState {
   products: Product[];
   user: User;
+  isAdminAuthenticated: boolean;
   bonuses: Bonus[];
   cart: CartItem[];
   orders: Order[];
   activeDiscount: number;
+  adminLogin: (password: string) => boolean;
+  adminLogout: () => void;
   addProduct: (product: Omit<Product, 'id'>) => void;
   updateProduct: (id: string, updates: Partial<Product>) => void;
+  deleteProduct: (id: string) => void;
   purchaseProduct: (productId: string) => void;
   addToCart: (productId: string, quantity?: number) => void;
   removeFromCart: (productId: string) => void;
@@ -33,11 +37,25 @@ export const useStore = create<StoreState>()(
         name: 'John Doe',
         miles: 1250
       },
+      isAdminAuthenticated: false,
       bonuses: bonusRewards,
       cart: [],
       orders: [],
       activeDiscount: 0,
       
+      adminLogin: (password) => {
+        // Simple password check - in production, use proper authentication
+        if (password === 'admin123') {
+          set({ isAdminAuthenticated: true });
+          return true;
+        }
+        return false;
+      },
+
+      adminLogout: () => {
+        set({ isAdminAuthenticated: false });
+      },
+
       addProduct: (product) => {
         const newProduct: Product = {
           ...product,
@@ -53,6 +71,12 @@ export const useStore = create<StoreState>()(
           products: state.products.map(product =>
             product.id === id ? { ...product, ...updates } : product
           )
+        }));
+      },
+
+      deleteProduct: (id) => {
+        set((state) => ({
+          products: state.products.filter(product => product.id !== id)
         }));
       },
 
@@ -234,6 +258,7 @@ export const useStore = create<StoreState>()(
       partialize: (state) => ({
         products: state.products,
         user: state.user,
+        isAdminAuthenticated: state.isAdminAuthenticated,
         cart: state.cart,
         orders: state.orders,
         activeDiscount: state.activeDiscount

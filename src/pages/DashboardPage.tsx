@@ -21,7 +21,7 @@ import { useTheme } from '../hooks/useTheme';
 import { ProductForm } from '../components/ProductForm';
 
 export const DashboardPage: React.FC = () => {
-  const { user, orders, redeemBonus, bonuses, activeDiscount, getCartTotal } = useStore();
+  const { user, orders, redeemBonus, bonuses, activeDiscount, getCartTotal, isAdminAuthenticated } = useStore();
   const { isDarkMode } = useTheme();
   const [showProductForm, setShowProductForm] = useState(false);
 
@@ -127,16 +127,18 @@ export const DashboardPage: React.FC = () => {
                 </Link>
 
                 {/* Admin Link */}
-                <Link
-                  to="/admin"
-                  className={`p-2 rounded-lg transition-colors ${
-                    isDarkMode
-                      ? 'hover:bg-gray-800 text-gray-300'
-                      : 'hover:bg-gray-100 text-gray-600'
-                  }`}
-                >
-                  <Settings className="w-6 h-6" />
-                </Link>
+                {isAdminAuthenticated && (
+                  <Link
+                    to="/admin"
+                    className={`p-2 rounded-lg transition-colors ${
+                      isDarkMode
+                        ? 'hover:bg-gray-800 text-gray-300'
+                        : 'hover:bg-gray-100 text-gray-600'
+                    }`}
+                  >
+                    <Settings className="w-6 h-6" />
+                  </Link>
+                )}
               </div>
             </div>
           </motion.div>
@@ -505,32 +507,34 @@ export const DashboardPage: React.FC = () => {
               </div>
             </Link>
 
-            <Link
-              to="/admin"
-              className={`p-6 rounded-xl border transition-all hover:shadow-lg ${
-                isDarkMode
-                  ? 'bg-gray-800 border-gray-700 hover:border-gray-600'
-                  : 'bg-white border-gray-200 hover:border-gray-300'
-              }`}
-            >
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-purple-100 dark:bg-purple-900/20 rounded-lg">
-                  <Settings className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+            {isAdminAuthenticated && (
+              <Link
+                to="/admin"
+                className={`p-6 rounded-xl border transition-all hover:shadow-lg ${
+                  isDarkMode
+                    ? 'bg-gray-800 border-gray-700 hover:border-gray-600'
+                    : 'bg-white border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-purple-100 dark:bg-purple-900/20 rounded-lg">
+                    <Settings className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className={`font-semibold ${
+                      isDarkMode ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      Admin Panel
+                    </h3>
+                    <p className={`text-sm ${
+                      isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                      Manage products & orders
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className={`font-semibold ${
-                    isDarkMode ? 'text-white' : 'text-gray-900'
-                  }`}>
-                    Admin Panel
-                  </h3>
-                  <p className={`text-sm ${
-                    isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    Manage products & orders
-                  </p>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            )}
           </motion.div>
         </div>
       </div>

@@ -8,10 +8,11 @@ import { useTheme } from '../hooks/useTheme';
 interface ProductFormProps {
   isOpen: boolean;
   onClose: () => void;
+  editingProduct?: Product | null;
 }
 
-export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose }) => {
-  const { addProduct } = useStore();
+export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editingProduct }) => {
+  const { addProduct, updateProduct } = useStore();
   const { isDarkMode } = useTheme();
   
   const [formData, setFormData] = useState({
@@ -25,6 +26,35 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose }) => 
     types: '',
     category: 'Electronics' as Product['category']
   });
+
+  // Update form data when editing product changes
+  React.useEffect(() => {
+    if (editingProduct) {
+      setFormData({
+        name: editingProduct.name,
+        amount: editingProduct.amount.toString(),
+        rate: editingProduct.rate.toString(),
+        status: editingProduct.status,
+        miles: editingProduct.miles.toString(),
+        text: editingProduct.text,
+        orders: editingProduct.orders.toString(),
+        types: editingProduct.types,
+        category: editingProduct.category
+      });
+    } else {
+      setFormData({
+        name: '',
+        amount: '',
+        rate: '',
+        status: 'Available',
+        miles: '',
+        text: '',
+        orders: '0',
+        types: '',
+        category: 'Electronics'
+      });
+    }
+  }, [editingProduct]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +71,12 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose }) => 
       category: formData.category
     };
 
-    addProduct(newProduct);
+    if (editingProduct) {
+      updateProduct(editingProduct.id, newProduct);
+    } else {
+      addProduct({ ...newProduct, orders: parseInt(formData.orders) });
+    }
+
     setFormData({
       name: '',
       amount: '',
@@ -84,7 +119,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose }) => 
           <h2 className={`text-xl font-semibold ${
             isDarkMode ? 'text-white' : 'text-gray-900'
           }`}>
-            Add New Product
+            {editingProduct ? 'Edit Product' : 'Add New Product'}
           </h2>
           <button
             onClick={onClose}
@@ -295,7 +330,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose }) => 
               className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
             >
               <Plus className="w-4 h-4" />
-              Add Product
+              {editingProduct ? 'Update Product' : 'Add Product'}
             </button>
           </div>
         </form>
