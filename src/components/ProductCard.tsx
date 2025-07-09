@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, ShoppingCart, Award, Package } from 'lucide-react';
+import { Star, ShoppingCart, Award, Package, Plus } from 'lucide-react';
 import { Product } from '../types';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
@@ -11,12 +11,18 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
-  const { purchaseProduct, activeDiscount } = useStore();
+  const { purchaseProduct, addToCart, activeDiscount } = useStore();
   const { isDarkMode } = useTheme();
 
   const handlePurchase = () => {
     if (product.status !== 'Out of Stock') {
       purchaseProduct(product.id);
+    }
+  };
+
+  const handleAddToCart = () => {
+    if (product.status !== 'Out of Stock') {
+      addToCart(product.id);
     }
   };
 
@@ -64,6 +70,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       {activeDiscount > 0 && (
         <div className="absolute top-3 right-3 z-10 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
           -{activeDiscount}%
+        </div>
+      )}
+
+      {/* Product Image */}
+      {product.image && (
+        <div className="relative h-48 overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>
       )}
 
@@ -131,7 +149,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         </div>
 
         {/* Price and Purchase */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mb-3">
           <div className="flex flex-col">
             {activeDiscount > 0 && (
               <span className={`text-sm line-through ${
@@ -146,19 +164,39 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
               ${finalPrice.toLocaleString()}
             </span>
           </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleAddToCart}
+            disabled={product.status === 'Out of Stock'}
+            className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg font-medium transition-all ${
+              product.status === 'Out of Stock'
+                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                : isDarkMode
+                ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            <Plus className="w-4 h-4" />
+            Cart
+          </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handlePurchase}
             disabled={product.status === 'Out of Stock'}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+            className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg font-medium transition-all ${
               product.status === 'Out of Stock'
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-md'
             }`}
           >
             <ShoppingCart className="w-4 h-4" />
-            Buy
+            Buy Now
           </motion.button>
         </div>
       </div>

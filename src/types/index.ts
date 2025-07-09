@@ -26,3 +26,23 @@ export interface Bonus {
   discount: number;
   type: 'discount' | 'free_item';
 }
+
+export interface CartItem {
+  productId: string;
+  name: string;
+  amount: number;
+  quantity: number;
+  total: number;
+  miles: number;
+  image?: string;
+  category: Product['category'];
+}
+
+export interface Order {
+  id: string;
+  items: CartItem[];
+  totalAmount: number;
+  totalMiles: number;
+  date: string;
+  status: 'completed' | 'pending' | 'cancelled';
+}

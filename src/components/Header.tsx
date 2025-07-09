@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  ShoppingBag, 
+  ShoppingBag,
+  ShoppingCart as CartIcon,
   Award, 
   Plus, 
   Moon, 
@@ -14,7 +15,8 @@ import {
   Hotel,
   Car,
   Sofa,
-  Coffee
+  Coffee,
+  User
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
@@ -30,11 +32,13 @@ const categories = [
 ];
 
 export const Header: React.FC = () => {
-  const { user, activeDiscount } = useStore();
+  const { user, activeDiscount, getCartTotal } = useStore();
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
   const [showForm, setShowForm] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const { totalItems } = getCartTotal();
 
   return (
     <>
@@ -121,6 +125,35 @@ export const Header: React.FC = () => {
                 <Plus className="w-4 h-4" />
                 Add Product
               </button>
+
+              {/* Cart Button */}
+              <Link
+                to="/cart"
+                className={`relative p-2 rounded-lg transition-colors ${
+                  isDarkMode
+                    ? 'hover:bg-gray-800 text-gray-300'
+                    : 'hover:bg-gray-100 text-gray-600'
+                }`}
+              >
+                <CartIcon className="w-5 h-5" />
+                {totalItems > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
+
+              {/* Account Button */}
+              <Link
+                to="/account"
+                className={`p-2 rounded-lg transition-colors ${
+                  isDarkMode
+                    ? 'hover:bg-gray-800 text-gray-300'
+                    : 'hover:bg-gray-100 text-gray-600'
+                }`}
+              >
+                <User className="w-5 h-5" />
+              </Link>
 
               {/* Theme Toggle */}
               <button

@@ -12,7 +12,8 @@ export const demoProducts: Product[] = [
     text: 'Direct flights with premium economy seating and meal service.',
     orders: 340,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-2',
@@ -24,7 +25,8 @@ export const demoProducts: Product[] = [
     text: 'Business class experience with flat-bed seating.',
     orders: 189,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-3',
@@ -36,7 +38,8 @@ export const demoProducts: Product[] = [
     text: 'Scenic route over the Atlantic with entertainment system.',
     orders: 267,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-4',
@@ -48,7 +51,8 @@ export const demoProducts: Product[] = [
     text: 'Direct overnight flight with complimentary wine service.',
     orders: 203,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-5',
@@ -60,7 +64,8 @@ export const demoProducts: Product[] = [
     text: 'Long-haul flight with premium amenities and lounge access.',
     orders: 145,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-6',
@@ -72,7 +77,8 @@ export const demoProducts: Product[] = [
     text: 'Cultural journey with Italian meal service.',
     orders: 298,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-7',
@@ -84,7 +90,8 @@ export const demoProducts: Product[] = [
     text: 'Gateway to Europe with modern aircraft.',
     orders: 234,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-8',
@@ -96,7 +103,8 @@ export const demoProducts: Product[] = [
     text: 'Central European hub with efficient connections.',
     orders: 176,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-9',
@@ -108,7 +116,8 @@ export const demoProducts: Product[] = [
     text: 'Luxury Middle Eastern experience with premium service.',
     orders: 167,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-10',
@@ -120,7 +129,8 @@ export const demoProducts: Product[] = [
     text: 'Gateway to India with authentic cuisine onboard.',
     orders: 189,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-11',
@@ -132,7 +142,8 @@ export const demoProducts: Product[] = [
     text: 'Asian adventure with modern entertainment systems.',
     orders: 123,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-12',
@@ -144,7 +155,8 @@ export const demoProducts: Product[] = [
     text: 'Ancient wonders await with comfortable seating.',
     orders: 98,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-13',
@@ -156,7 +168,8 @@ export const demoProducts: Product[] = [
     text: 'South American adventure with Brazilian hospitality.',
     orders: 215,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-14',
@@ -168,7 +181,8 @@ export const demoProducts: Product[] = [
     text: 'Portuguese charm with coastal views upon arrival.',
     orders: 267,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-15',
@@ -180,7 +194,8 @@ export const demoProducts: Product[] = [
     text: 'Nordic adventure with Scandinavian design aesthetic.',
     orders: 145,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-16',
@@ -192,7 +207,8 @@ export const demoProducts: Product[] = [
     text: 'Classical European experience with musical heritage.',
     orders: 189,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-17',
@@ -204,7 +220,8 @@ export const demoProducts: Product[] = [
     text: 'Northern European gateway with aurora possibilities.',
     orders: 134,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-18',
@@ -216,7 +233,8 @@ export const demoProducts: Product[] = [
     text: 'Alpine adventure with Swiss precision service.',
     orders: 167,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-19',
@@ -228,7 +246,8 @@ export const demoProducts: Product[] = [
     text: 'European Union hub with chocolate and waffle service.',
     orders: 223,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-20',
@@ -240,7 +259,8 @@ export const demoProducts: Product[] = [
     text: 'Medieval charm meets modern comfort in Central Europe.',
     orders: 178,
     types: 'International',
-    category: 'Flights'
+    category: 'Flights',
+    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
   // Electronics (20 items)
@@ -254,7 +274,8 @@ export const demoProducts: Product[] = [
     text: 'Latest flagship smartphone with titanium design and advanced cameras.',
     orders: 1840,
     types: 'Smartphone',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-2',
@@ -266,7 +287,8 @@ export const demoProducts: Product[] = [
     text: 'Professional laptop with M3 chip and stunning Retina display.',
     orders: 567,
     types: 'Laptop',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-3',
@@ -278,7 +300,8 @@ export const demoProducts: Product[] = [
     text: 'Premium wireless earbuds with active noise cancellation.',
     orders: 2340,
     types: 'Audio',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-4',
@@ -290,7 +313,8 @@ export const demoProducts: Product[] = [
     text: 'Versatile tablet perfect for creativity and productivity.',
     orders: 890,
     types: 'Tablet',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-5',
@@ -302,7 +326,8 @@ export const demoProducts: Product[] = [
     text: 'Ultra-high definition smart TV with vibrant colors.',
     orders: 234,
     types: 'Television',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-6',
@@ -314,7 +339,8 @@ export const demoProducts: Product[] = [
     text: 'Industry-leading noise canceling headphones.',
     orders: 1567,
     types: 'Audio',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-7',
@@ -326,7 +352,8 @@ export const demoProducts: Product[] = [
     text: 'Portable gaming console with vibrant OLED screen.',
     orders: 1234,
     types: 'Gaming',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-8',
@@ -338,7 +365,8 @@ export const demoProducts: Product[] = [
     text: 'Rugged smartwatch designed for extreme adventures.',
     orders: 678,
     types: 'Wearable',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-9',
@@ -350,7 +378,8 @@ export const demoProducts: Product[] = [
     text: 'Ultra-portable laptop with premium build quality.',
     orders: 445,
     types: 'Laptop',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-10',
@@ -362,7 +391,8 @@ export const demoProducts: Product[] = [
     text: 'Professional mirrorless camera with 8K video capability.',
     orders: 123,
     types: 'Camera',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-11',
@@ -374,7 +404,8 @@ export const demoProducts: Product[] = [
     text: 'Advanced cordless vacuum with laser dust detection.',
     orders: 567,
     types: 'Home Appliance',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-12',
@@ -386,7 +417,8 @@ export const demoProducts: Product[] = [
     text: 'Portable waterproof Bluetooth speaker with rich sound.',
     orders: 1890,
     types: 'Audio',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-13',
@@ -398,7 +430,8 @@ export const demoProducts: Product[] = [
     text: 'Versatile 2-in-1 laptop and tablet for professionals.',
     orders: 356,
     types: 'Tablet',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-14',
@@ -410,7 +443,8 @@ export const demoProducts: Product[] = [
     text: 'Home charging solution for Tesla vehicles.',
     orders: 678,
     types: 'Automotive',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-15',
@@ -422,7 +456,8 @@ export const demoProducts: Product[] = [
     text: 'Multi-sport GPS watch with advanced training features.',
     orders: 234,
     types: 'Wearable',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-16',
@@ -434,7 +469,8 @@ export const demoProducts: Product[] = [
     text: '34-inch curved monitor perfect for productivity.',
     orders: 445,
     types: 'Monitor',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-17',
@@ -446,7 +482,8 @@ export const demoProducts: Product[] = [
     text: 'Professional gaming mouse with precise tracking.',
     orders: 1567,
     types: 'Gaming',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-18',
@@ -458,7 +495,8 @@ export const demoProducts: Product[] = [
     text: 'Waterproof e-reader with adjustable warm light.',
     orders: 2234,
     types: 'E-reader',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-19',
@@ -470,7 +508,8 @@ export const demoProducts: Product[] = [
     text: 'Smart doorbell with HD video and motion detection.',
     orders: 1234,
     types: 'Smart Home',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'electronics-20',
@@ -482,7 +521,8 @@ export const demoProducts: Product[] = [
     text: 'Next-generation VR headset with mixed reality capabilities.',
     orders: 567,
     types: 'VR',
-    category: 'Electronics'
+    category: 'Electronics',
+    image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
   // Hotels (20 items)
@@ -496,7 +536,8 @@ export const demoProducts: Product[] = [
     text: 'Luxury hotel in the heart of Manhattan with skyline views.',
     orders: 1234,
     types: 'Luxury',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-2',
@@ -508,7 +549,8 @@ export const demoProducts: Product[] = [
     text: 'Overwater villa with crystal clear lagoon and private beach.',
     orders: 456,
     types: 'Beach Resort',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-3',
@@ -520,7 +562,8 @@ export const demoProducts: Product[] = [
     text: 'Modern business hotel near Shibuya with excellent amenities.',
     orders: 2345,
     types: 'Business',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-4',
@@ -532,7 +575,8 @@ export const demoProducts: Product[] = [
     text: 'Cozy mountain lodge with panoramic Alpine views.',
     orders: 789,
     types: 'Mountain Lodge',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-5',
@@ -544,7 +588,8 @@ export const demoProducts: Product[] = [
     text: 'Iconic casino hotel with world-class entertainment.',
     orders: 3456,
     types: 'Casino',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-6',
@@ -556,7 +601,8 @@ export const demoProducts: Product[] = [
     text: 'Charming boutique hotel in the historic Marais district.',
     orders: 1123,
     types: 'Boutique',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-7',
@@ -568,7 +614,8 @@ export const demoProducts: Product[] = [
     text: 'Serene wellness retreat with spa treatments and yoga.',
     orders: 567,
     types: 'Wellness',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-8',
@@ -580,7 +627,8 @@ export const demoProducts: Product[] = [
     text: 'Historic inn with traditional British charm and modern comfort.',
     orders: 1789,
     types: 'Historic',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-9',
@@ -592,7 +640,8 @@ export const demoProducts: Product[] = [
     text: 'Ultra-luxury resort with private beach and gold-plated amenities.',
     orders: 345,
     types: 'Luxury',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-10',
@@ -604,7 +653,8 @@ export const demoProducts: Product[] = [
     text: 'Modern beachfront hotel with Mediterranean cuisine.',
     orders: 1567,
     types: 'Beach',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-11',
@@ -616,7 +666,8 @@ export const demoProducts: Product[] = [
     text: 'Stunning cliff-side villa with infinity pool and sunset views.',
     orders: 234,
     types: 'Villa',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-12',
@@ -628,7 +679,8 @@ export const demoProducts: Product[] = [
     text: 'Authentic Japanese inn with tatami rooms and kaiseki dining.',
     orders: 678,
     types: 'Traditional',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-13',
@@ -640,7 +692,8 @@ export const demoProducts: Product[] = [
     text: 'Romantic vineyard hotel with wine tasting and gourmet dining.',
     orders: 890,
     types: 'Vineyard',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-14',
@@ -652,7 +705,8 @@ export const demoProducts: Product[] = [
     text: 'Unique glass igloo hotel perfect for aurora viewing.',
     orders: 456,
     types: 'Unique',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-15',
@@ -664,7 +718,8 @@ export const demoProducts: Product[] = [
     text: 'Vibrant beachfront resort with samba lessons and caipirinha.',
     orders: 1234,
     types: 'Beach Resort',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-16',
@@ -676,7 +731,8 @@ export const demoProducts: Product[] = [
     text: 'Medieval castle converted into luxury hotel with ghost tours.',
     orders: 345,
     types: 'Historic',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-17',
@@ -688,7 +744,8 @@ export const demoProducts: Product[] = [
     text: 'Traditional riad with rooftop terrace and hammam spa.',
     orders: 1567,
     types: 'Traditional',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-18',
@@ -700,7 +757,8 @@ export const demoProducts: Product[] = [
     text: 'Cozy ski lodge with fireplace and direct slope access.',
     orders: 789,
     types: 'Ski Resort',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-19',
@@ -712,7 +770,8 @@ export const demoProducts: Product[] = [
     text: 'Unique floating hotel on pristine lake with fishing activities.',
     orders: 2345,
     types: 'Unique',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-20',
@@ -724,7 +783,8 @@ export const demoProducts: Product[] = [
     text: 'Remote lodge with stargazing tours and wildlife encounters.',
     orders: 567,
     types: 'Adventure',
-    category: 'Hotels'
+    category: 'Hotels',
+    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
   // Cars (20 items)
@@ -738,7 +798,8 @@ export const demoProducts: Product[] = [
     text: 'Premium electric sedan with autopilot and ludicrous mode.',
     orders: 234,
     types: 'Electric',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-2',
@@ -750,7 +811,8 @@ export const demoProducts: Product[] = [
     text: 'High-performance sports sedan with track-tuned suspension.',
     orders: 156,
     types: 'Sports',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-3',
@@ -762,7 +824,8 @@ export const demoProducts: Product[] = [
     text: 'Luxury sedan with advanced driver assistance systems.',
     orders: 345,
     types: 'Luxury',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-4',
@@ -774,7 +837,8 @@ export const demoProducts: Product[] = [
     text: 'Iconic sports car with turbocharged flat-six engine.',
     orders: 67,
     types: 'Sports',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-5',
@@ -786,7 +850,8 @@ export const demoProducts: Product[] = [
     text: 'Electric pickup truck with impressive towing capacity.',
     orders: 456,
     types: 'Electric Truck',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-6',
@@ -798,7 +863,8 @@ export const demoProducts: Product[] = [
     text: 'Rugged off-road vehicle with removable doors and roof.',
     orders: 567,
     types: 'SUV',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-7',
@@ -810,7 +876,8 @@ export const demoProducts: Product[] = [
     text: 'High-performance wagon with quattro all-wheel drive.',
     orders: 89,
     types: 'Performance',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-8',
@@ -822,7 +889,8 @@ export const demoProducts: Product[] = [
     text: 'Track-focused hot hatch with manual transmission.',
     orders: 678,
     types: 'Hot Hatch',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-9',
@@ -834,7 +902,8 @@ export const demoProducts: Product[] = [
     text: 'Exotic supercar with V10 engine and all-wheel drive.',
     orders: 23,
     types: 'Supercar',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-10',
@@ -846,7 +915,8 @@ export const demoProducts: Product[] = [
     text: 'Plug-in hybrid with exceptional fuel economy.',
     orders: 1234,
     types: 'Hybrid',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-11',
@@ -858,7 +928,8 @@ export const demoProducts: Product[] = [
     text: 'American sports car with naturally aspirated V8.',
     orders: 145,
     types: 'Sports',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-12',
@@ -870,7 +941,8 @@ export const demoProducts: Product[] = [
     text: 'Luxury SUV with superior off-road capabilities.',
     orders: 234,
     types: 'Luxury SUV',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-13',
@@ -882,7 +954,8 @@ export const demoProducts: Product[] = [
     text: 'Lightweight roadster with perfect 50/50 weight distribution.',
     orders: 890,
     types: 'Roadster',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-14',
@@ -894,7 +967,8 @@ export const demoProducts: Product[] = [
     text: 'Safe and luxurious 7-seat SUV with Scandinavian design.',
     orders: 456,
     types: 'Family SUV',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-15',
@@ -906,7 +980,8 @@ export const demoProducts: Product[] = [
     text: 'British supercar with active aerodynamics and carbon fiber.',
     orders: 12,
     types: 'Supercar',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-16',
@@ -918,7 +993,8 @@ export const demoProducts: Product[] = [
     text: 'Rally-bred sports sedan with symmetrical all-wheel drive.',
     orders: 678,
     types: 'Sports',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-17',
@@ -930,7 +1006,8 @@ export const demoProducts: Product[] = [
     text: 'Luxury flagship sedan with executive rear seating.',
     orders: 123,
     types: 'Luxury',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-18',
@@ -942,7 +1019,8 @@ export const demoProducts: Product[] = [
     text: 'American muscle car with supercharged V8 engine.',
     orders: 289,
     types: 'Muscle Car',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-19',
@@ -954,7 +1032,8 @@ export const demoProducts: Product[] = [
     text: 'Grand touring coupe with naturally aspirated V8.',
     orders: 156,
     types: 'Grand Tourer',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'car-20',
@@ -966,7 +1045,8 @@ export const demoProducts: Product[] = [
     text: 'Hybrid supercar with precision crafted performance.',
     orders: 45,
     types: 'Hybrid Sports',
-    category: 'Cars'
+    category: 'Cars',
+    image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
   // Furniture (20 items)
@@ -980,7 +1060,8 @@ export const demoProducts: Product[] = [
     text: 'Ergonomic office chair with advanced PostureFit technology.',
     orders: 567,
     types: 'Office Chair',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-2',
@@ -992,7 +1073,8 @@ export const demoProducts: Product[] = [
     text: 'Stylish mid-century modern sofa with premium upholstery.',
     orders: 890,
     types: 'Sofa',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-3',
@@ -1004,7 +1086,8 @@ export const demoProducts: Product[] = [
     text: 'Minimalist bed frame with clean lines and storage options.',
     orders: 2345,
     types: 'Bed Frame',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-4',
@@ -1016,7 +1099,8 @@ export const demoProducts: Product[] = [
     text: 'Solid wood dining table perfect for family gatherings.',
     orders: 456,
     types: 'Dining Table',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-5',
@@ -1028,7 +1112,8 @@ export const demoProducts: Product[] = [
     text: 'Luxury sectional sofa with down-filled cushions.',
     orders: 123,
     types: 'Sectional',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-6',
@@ -1040,7 +1125,8 @@ export const demoProducts: Product[] = [
     text: 'Modern acrylic desk that creates an illusion of space.',
     orders: 345,
     types: 'Desk',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-7',
@@ -1052,7 +1138,8 @@ export const demoProducts: Product[] = [
     text: 'Scandinavian-inspired sofa with rich leather upholstery.',
     orders: 678,
     types: 'Sofa',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-8',
@@ -1064,7 +1151,8 @@ export const demoProducts: Product[] = [
     text: 'Modern bookshelf with adjustable shelves and cable management.',
     orders: 1234,
     types: 'Bookshelf',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1148955/pexels-photo-1148955.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-9',
@@ -1076,7 +1164,8 @@ export const demoProducts: Product[] = [
     text: 'Iconic mid-century lounge chair with ottoman.',
     orders: 89,
     types: 'Lounge Chair',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-10',
@@ -1088,7 +1177,8 @@ export const demoProducts: Product[] = [
     text: 'Memory foam mattress with zoned support technology.',
     orders: 1567,
     types: 'Mattress',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-11',
@@ -1100,7 +1190,8 @@ export const demoProducts: Product[] = [
     text: 'Minimalist platform bed with integrated nightstands.',
     orders: 234,
     types: 'Platform Bed',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-12',
@@ -1112,7 +1203,8 @@ export const demoProducts: Product[] = [
     text: 'Sculptural glass coffee table with organic wood base.',
     orders: 345,
     types: 'Coffee Table',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-13',
@@ -1124,7 +1216,8 @@ export const demoProducts: Product[] = [
     text: 'Ergonomic office chair with LiveBack technology.',
     orders: 456,
     types: 'Office Chair',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-14',
@@ -1136,7 +1229,8 @@ export const demoProducts: Product[] = [
     text: 'Solid wood dresser with soft-close drawers.',
     orders: 567,
     types: 'Dresser',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1148955/pexels-photo-1148955.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-15',
@@ -1148,7 +1242,8 @@ export const demoProducts: Product[] = [
     text: 'Minimalist oak shelving with modular design.',
     orders: 890,
     types: 'Shelving',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1148955/pexels-photo-1148955.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-16',
@@ -1160,7 +1255,8 @@ export const demoProducts: Product[] = [
     text: 'Tulip table with marble top and sculptural base.',
     orders: 123,
     types: 'Dining Table',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-17',
@@ -1172,7 +1268,8 @@ export const demoProducts: Product[] = [
     text: 'Contemporary outdoor dining set with weather resistance.',
     orders: 234,
     types: 'Outdoor',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-18',
@@ -1184,7 +1281,8 @@ export const demoProducts: Product[] = [
     text: 'Modern nightstand with integrated charging station.',
     orders: 678,
     types: 'Nightstand',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1148955/pexels-photo-1148955.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-19',
@@ -1196,7 +1294,8 @@ export const demoProducts: Product[] = [
     text: 'Stackable chair made from a single sheet of steel.',
     orders: 1234,
     types: 'Dining Chair',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'furniture-20',
@@ -1208,7 +1307,8 @@ export const demoProducts: Product[] = [
     text: 'Italian-designed extendable table with ceramic top.',
     orders: 345,
     types: 'Extendable Table',
-    category: 'Furniture'
+    category: 'Furniture',
+    image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
   // Beverage (20 items)
@@ -1222,7 +1322,8 @@ export const demoProducts: Product[] = [
     text: 'Vintage champagne with complex flavors and elegant bubbles.',
     orders: 234,
     types: 'Champagne',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-2',
@@ -1234,7 +1335,8 @@ export const demoProducts: Product[] = [
     text: 'Single-origin coffee beans with notes of chocolate and berries.',
     orders: 1890,
     types: 'Coffee',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-3',
@@ -1246,7 +1348,8 @@ export const demoProducts: Product[] = [
     text: 'Aged single malt Scotch whisky with rich oak flavors.',
     orders: 156,
     types: 'Whisky',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-4',
@@ -1258,7 +1361,8 @@ export const demoProducts: Product[] = [
     text: 'Premium natural artesian water from Fiji.',
     orders: 5678,
     types: 'Water',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-5',
@@ -1270,7 +1374,8 @@ export const demoProducts: Product[] = [
     text: 'Bordeaux-style blend from Napa Valley with intense flavors.',
     orders: 123,
     types: 'Wine',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-6',
@@ -1282,7 +1387,8 @@ export const demoProducts: Product[] = [
     text: 'Medium roast coffee with smooth, balanced flavor.',
     orders: 3456,
     types: 'Coffee',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-7',
@@ -1294,7 +1400,8 @@ export const demoProducts: Product[] = [
     text: 'Premium cognac with exceptional smoothness and complexity.',
     orders: 67,
     types: 'Cognac',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-8',
@@ -1306,7 +1413,8 @@ export const demoProducts: Product[] = [
     text: 'Organic kombucha with probiotics and natural flavors.',
     orders: 2345,
     types: 'Kombucha',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-9',
@@ -1318,7 +1426,8 @@ export const demoProducts: Product[] = [
     text: 'Elegant champagne with floral notes and fine bubbles.',
     orders: 345,
     types: 'Champagne',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-10',
@@ -1330,7 +1439,8 @@ export const demoProducts: Product[] = [
     text: 'Natural spring water from the French Alps.',
     orders: 7890,
     types: 'Water',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-11',
@@ -1342,7 +1452,8 @@ export const demoProducts: Product[] = [
     text: 'Premium blended Scotch whisky with complex flavor profile.',
     orders: 234,
     types: 'Whisky',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-12',
@@ -1354,7 +1465,8 @@ export const demoProducts: Product[] = [
     text: 'Rich Napa Valley Cabernet Sauvignon with bold tannins.',
     orders: 567,
     types: 'Wine',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-13',
@@ -1366,7 +1478,8 @@ export const demoProducts: Product[] = [
     text: 'Naturally flavored sparkling water with no calories.',
     orders: 4567,
     types: 'Sparkling Water',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-14',
@@ -1378,7 +1491,8 @@ export const demoProducts: Product[] = [
     text: 'Specialty coffee with direct trade sourcing.',
     orders: 1234,
     types: 'Coffee',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-15',
@@ -1390,7 +1504,8 @@ export const demoProducts: Product[] = [
     text: 'Extra old cognac with exceptional depth and complexity.',
     orders: 89,
     types: 'Cognac',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-16',
@@ -1402,7 +1517,8 @@ export const demoProducts: Product[] = [
     text: 'Prestigious champagne with incredible depth and finesse.',
     orders: 123,
     types: 'Champagne',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-17',
@@ -1414,7 +1530,8 @@ export const demoProducts: Product[] = [
     text: 'Premium white wine blend with crisp acidity.',
     orders: 156,
     types: 'Wine',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-18',
@@ -1426,7 +1543,8 @@ export const demoProducts: Product[] = [
     text: 'Smooth cold brew concentrate for iced coffee lovers.',
     orders: 2345,
     types: 'Coffee',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-19',
@@ -1438,7 +1556,8 @@ export const demoProducts: Product[] = [
     text: 'Smooth American vodka distilled from corn.',
     orders: 1567,
     types: 'Vodka',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'beverage-20',
@@ -1450,7 +1569,8 @@ export const demoProducts: Product[] = [
     text: 'Premium Japanese whisky with harmonious flavor balance.',
     orders: 78,
     types: 'Japanese Whisky',
-    category: 'Beverage'
+    category: 'Beverage',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   }
 ];
 

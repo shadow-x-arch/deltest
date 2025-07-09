@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Header } from './components/Header';
 import { HomePage } from './pages/HomePage';
 import { CategoryPage } from './pages/CategoryPage';
+import { CartPage } from './pages/CartPage';
+import { AccountPage } from './pages/AccountPage';
 import { useTheme } from './hooks/useTheme';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/account" element={<AccountPage />} />
             <Route path="/flights" element={<CategoryPage />} />
             <Route path="/electronics" element={<CategoryPage />} />
             <Route path="/hotels" element={<CategoryPage />} />
