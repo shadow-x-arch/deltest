@@ -3,9 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ShoppingBag,
-  ShoppingCart as CartIcon,
-  Award, 
-  Plus, 
   Moon, 
   Sun, 
   Menu, 
@@ -18,9 +15,7 @@ import {
   Coffee,
   User
 } from 'lucide-react';
-import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
-import { ProductForm } from './ProductForm';
 
 const categories = [
   { name: 'Flights', path: '/flights', icon: Plane },
@@ -32,16 +27,13 @@ const categories = [
 ];
 
 export const Header: React.FC = () => {
-  const { user, activeDiscount, getCartTotal } = useStore();
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
-  const [showForm, setShowForm] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  const { totalItems } = getCartTotal();
 
   return (
-    <>
+    <div>
       <header className={`sticky top-0 z-40 border-b transition-colors ${
         isDarkMode
           ? 'bg-gray-900/95 backdrop-blur-sm border-gray-700'
@@ -90,62 +82,10 @@ export const Header: React.FC = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center gap-4">
-              {/* Miles Display */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className={`flex items-center gap-2 px-3 py-2 rounded-lg cursor-pointer ${
-                isDarkMode
-                  ? 'bg-gray-800 text-amber-400'
-                  : 'bg-amber-50 text-amber-700'
-              }`}>
-                <Award className="w-4 h-4" />
-                <span className="text-sm font-semibold">
-                  {user.miles.toLocaleString()} miles
-                </span>
-              </motion.div>
 
-              {/* Active Discount */}
-              {activeDiscount > 0 && (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="flex items-center gap-2 px-3 py-2 bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400 rounded-lg"
-                >
-                  <span className="text-sm font-semibold">
-                    {activeDiscount}% OFF
-                  </span>
-                </motion.div>
-              )}
-
-              {/* Add Product Button */}
-              <button
-                onClick={() => setShowForm(true)}
-                className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <Plus className="w-4 h-4" />
-                Add Product
-              </button>
-
-              {/* Cart Button */}
+              {/* Dashboard Button */}
               <Link
-                to="/cart"
-                className={`relative p-2 rounded-lg transition-colors ${
-                  isDarkMode
-                    ? 'hover:bg-gray-800 text-gray-300'
-                    : 'hover:bg-gray-100 text-gray-600'
-                }`}
-              >
-                <CartIcon className="w-5 h-5" />
-                {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                    {totalItems}
-                  </span>
-                )}
-              </Link>
-
-              {/* Account Button */}
-              <Link
-                to="/account"
+                to="/dashboard"
                 className={`p-2 rounded-lg transition-colors ${
                   isDarkMode
                     ? 'hover:bg-gray-800 text-gray-300'
@@ -214,22 +154,18 @@ export const Header: React.FC = () => {
                   );
                 })}
               </div>
-              <button
-                onClick={() => {
-                  setShowForm(true);
-                  setShowMobileMenu(false);
-                }}
+              <Link
+                to="/dashboard"
+                onClick={() => setShowMobileMenu(false)}
                 className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <Plus className="w-4 h-4" />
-                Add Product
-              </button>
+                <User className="w-4 h-4" />
+                Dashboard
+              </Link>
             </motion.div>
           )}
         </div>
       </header>
-
-      <ProductForm isOpen={showForm} onClose={() => setShowForm(false)} />
-    </>
+    </div>
   );
 };
