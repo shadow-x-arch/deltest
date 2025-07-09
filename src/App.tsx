@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Header } from './components/Header';
 import { HomePage } from './pages/HomePage';
 import { CategoryPage } from './pages/CategoryPage';
+import { CartPage } from './pages/CartPage';
+import { AccountPage } from './pages/AccountPage';
+import { AdminPage } from './pages/AdminPage';
 import { useTheme } from './hooks/useTheme';
 function App() {
   const { isDarkMode } = useTheme();
@@ -30,6 +33,9 @@ function App() {
             <Route path="/cars" element={<CategoryPage />} />
             <Route path="/furniture" element={<CategoryPage />} />
             <Route path="/beverage" element={<CategoryPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/account" element={<AccountPage />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
