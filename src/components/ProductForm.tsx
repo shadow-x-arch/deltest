@@ -86,7 +86,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
       text: '',
       orders: '0',
       types: '',
-      category: 'Electronics'
+      category: 'House'
     });
     onClose();
   };
@@ -263,11 +263,10 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
                     : 'bg-white border-gray-300 text-gray-900'
                 }`}
               >
-                <option value="Flights">Flights</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Hotels">Hotels</option>
+                <option value="House">House</option>
                 <option value="Cars">Cars</option>
-                <option value="Furniture">Furniture</option>
+                <option value="Travel">Travel</option>
+                <option value="Electronics">Electronics</option>
                 <option value="Beverage">Beverage</option>
               </select>
             </div>

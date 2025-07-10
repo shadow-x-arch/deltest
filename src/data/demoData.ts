@@ -1,32 +1,34 @@
 import { Product, Bonus } from '../types';
 
 export const demoProducts: Product[] = [
-  // Flights (20 items)
+  // House - Furniture (10 items)
   {
-    id: 'flight-1',
-    name: 'NYC to London Round Trip',
-    amount: 899,
+    id: 'house-furniture-1',
+    name: 'Herman Miller Aeron Chair',
+    amount: 1399,
     rate: 4.8,
     status: 'Available',
-    miles: 1200,
-    text: 'Direct flights with premium economy seating and meal service.',
-    orders: 340,
-    types: 'International',
-    category: 'Flights',
-    image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
+    miles: 2799,
+    text: 'Ergonomic office chair with advanced PostureFit technology.',
+    orders: 567,
+    types: 'Office Chair',
+    category: 'House',
+    subcategory: 'Furniture',
+    image: 'https://images.pexels.com/photos/586744/pexels-photo-586744.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    id: 'flight-2',
-    name: 'Los Angeles to Tokyo',
+    id: 'house-furniture-2',
+    name: 'West Elm Mid-Century Sofa',
     amount: 1299,
-    rate: 4.9,
+    rate: 4.6,
     status: 'Available',
-    miles: 1800,
-    text: 'Business class experience with flat-bed seating.',
-    orders: 189,
-    types: 'International',
-    category: 'Flights',
-    image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
+    miles: 2599,
+    text: 'Stylish mid-century modern sofa with premium upholstery.',
+    orders: 890,
+    types: 'Sofa',
+    category: 'House',
+    subcategory: 'Furniture',
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-3',
