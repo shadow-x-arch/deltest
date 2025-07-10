@@ -134,7 +134,7 @@ const getSubcategoryProducts = (products: Product[], category: Product['category
   if (!subcategory) return categoryProducts;
   
   // Map old categories to new subcategories
-  const subcategoryMapping: Record<string, string[]> = {
+  const subcategoryMapping: Record<string, Record<string, string[]>> = {
     'House': {
       'Furniture': ['Furniture'],
       'Appliance': ['Electronics'] // Some electronics can be appliances
@@ -159,18 +159,6 @@ const getSubcategoryProducts = (products: Product[], category: Product['category
   };
   
   return categoryProducts;
-};
-        text: 'text-pink-700 dark:text-pink-400',
-        border: 'border-pink-200 dark:border-pink-700'
-      };
-    default:
-      return {
-        gradient: 'from-gray-500 to-gray-600',
-        bg: 'bg-gray-50 dark:bg-gray-900/20',
-        text: 'text-gray-700 dark:text-gray-400',
-        border: 'border-gray-200 dark:border-gray-700'
-      };
-  }
 };
 
 export const CategoryPage: React.FC = () => {
@@ -275,7 +263,7 @@ export const CategoryPage: React.FC = () => {
                 className="mb-8"
               >
                 <div className={`p-8 rounded-xl border ${categoryColors.bg} ${categoryColors.border} relative overflow-hidden ${
-                  categoryName === 'Travel' ? 'min-h-[300px]' : 'min-h-[250px]'
+                  categoryName === 'Flights' ? 'min-h-[300px]' : ''
                 }`}>
                   <div className="relative z-10">
                     <h1 className={`text-4xl font-bold mb-4 ${categoryColors.text}`}>
@@ -284,44 +272,6 @@ export const CategoryPage: React.FC = () => {
                     <p className={`text-lg mb-6 ${categoryColors.text} opacity-90`}>
                       {categoryInfo.description}
                     </p>
-                    
-                    {/* Subcategories */}
-                    {categoryInfo.subcategories.length > 0 && (
-                      <div className="mb-6">
-                        <h3 className={`text-lg font-semibold mb-3 ${categoryColors.text}`}>
-                          Browse by Type:
-                        </h3>
-                        <div className="flex flex-wrap gap-3">
-                          <button
-                            onClick={() => setSelectedSubcategory(null)}
-                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                              selectedSubcategory === null
-                                ? `bg-gradient-to-r ${categoryColors.gradient} text-white shadow-md`
-                                : isDarkMode
-                                ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                                : 'bg-white/50 text-gray-700 hover:bg-white/70'
-                            }`}
-                          >
-                            All {categoryName}
-                          </button>
-                          {categoryInfo.subcategories.map((sub) => (
-                            <button
-                              key={sub.name}
-                              onClick={() => setSelectedSubcategory(sub.name)}
-                              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                                selectedSubcategory === sub.name
-                                  ? `bg-gradient-to-r ${categoryColors.gradient} text-white shadow-md`
-                                  : isDarkMode
-                                  ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                                  : 'bg-white/50 text-gray-700 hover:bg-white/70'
-                              }`}
-                            >
-                              {sub.name}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                     
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -340,26 +290,12 @@ export const CategoryPage: React.FC = () => {
                   
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-64 h-64 opacity-20">
-                    {categoryName === 'Travel' ? (
+                    {categoryName === 'Flights' ? (
                       <div className="w-full h-full">
-                        {/* Subtle cloud-like shapes for travel */}
+                        {/* Subtle cloud-like shapes for flights */}
                         <div className="absolute top-8 right-8 w-32 h-16 bg-white/30 rounded-full blur-sm" />
                         <div className="absolute top-16 right-16 w-24 h-12 bg-white/20 rounded-full blur-sm" />
                         <div className="absolute top-24 right-4 w-20 h-10 bg-white/25 rounded-full blur-sm" />
-                      </div>
-                    ) : categoryName === 'House' ? (
-                      <div className="w-full h-full">
-                        {/* House-like shapes */}
-                        <div className="absolute top-12 right-12 w-16 h-16 bg-white/20 rounded-lg rotate-45" />
-                        <div className="absolute top-20 right-20 w-12 h-12 bg-white/15 rounded-lg rotate-12" />
-                        <div className="absolute top-8 right-24 w-8 h-8 bg-white/25 rounded-full" />
-                      </div>
-                    ) : categoryName === 'Cars' ? (
-                      <div className="w-full h-full">
-                        {/* Car-like shapes */}
-                        <div className="absolute top-16 right-16 w-20 h-8 bg-white/20 rounded-full" />
-                        <div className="absolute top-12 right-12 w-6 h-6 bg-white/25 rounded-full" />
-                        <div className="absolute top-12 right-28 w-6 h-6 bg-white/25 rounded-full" />
                       </div>
                     ) : (
                       <div className={`w-full h-full rounded-full ${categoryColors.text.replace('text-', 'bg-')} transform translate-x-32 -translate-y-32`} />
@@ -377,7 +313,7 @@ export const CategoryPage: React.FC = () => {
               >
                 <SearchBar
                   onSearch={setSearchQuery}
-                  placeholder={`Search ${selectedSubcategory || categoryName.toLowerCase()}...`}
+                  placeholder={`Search ${categoryName.toLowerCase()}...`}
                 />
               </motion.div>
 
