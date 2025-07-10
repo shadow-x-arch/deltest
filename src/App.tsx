@@ -18,6 +18,7 @@ import { CarsLandingPage } from './pages/CarsLandingPage';
 import { LuxuryCarsPage } from './pages/LuxuryCarsPage';
 import { ElectricCarsPage } from './pages/ElectricCarsPage';
 import { CarRentalPage } from './pages/CarRentalPage';
+import { BeverageLandingPage } from './pages/BeverageLandingPage';
 import { CategoryPage } from './pages/CategoryPage';
 import { CartPage } from './pages/CartPage';
 import { AccountPage } from './pages/AccountPage';
@@ -60,7 +61,7 @@ function App() {
             <Route path="/cars/luxury" element={<LuxuryCarsPage />} />
             <Route path="/cars/electric" element={<ElectricCarsPage />} />
             <Route path="/cars/rental" element={<CarRentalPage />} />
-            <Route path="/beverage" element={<CategoryPage />} />
+            <Route path="/beverage" element={<BeverageLandingPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/account" element={<AccountPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
