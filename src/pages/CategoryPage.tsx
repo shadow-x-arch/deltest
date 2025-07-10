@@ -177,7 +177,7 @@ export const CategoryPage: React.FC = () => {
   const categoryColors = getCategoryColors(categoryName);
   
   if (!categoryName) {
-    return <Navigate to="/house" replace />;
+    return <Navigate to="/electronics" replace />;
   }
   
   const filteredProducts = useMemo(() => {
@@ -238,14 +238,61 @@ export const CategoryPage: React.FC = () => {
     return filtered;
   }, [products, categoryName, sortBy, sortOrder, filterBy, priceRange, searchQuery]);
 
-  const categoryInfo = getCategoryInfo(categoryName);
+  const categoryDisplayName = categoryName.toLowerCase();
 
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
     setShowProductModal(true);
   };
 
-  const [selectedSubcategory, setSelectedSubcategory] = React.useState<string | null>(null);
+  const getCategoryDescription = (category: Product['category']) => {
+    switch (category) {
+      case 'Flights':
+        return {
+          title: 'Explore the World with Premium Flights',
+          description: 'Discover amazing destinations with our curated selection of premium flights. Earn miles with every booking and enjoy exclusive travel benefits.',
+          features: ['Premium Economy & Business Class', 'Direct Routes Available', 'Flexible Booking Options', 'Lounge Access Included']
+        };
+      case 'Electronics':
+        return {
+          title: 'Latest Technology & Gadgets',
+          description: 'Stay ahead with cutting-edge electronics and innovative gadgets. From smartphones to smart home devices, find everything you need.',
+          features: ['Latest Models Available', 'Warranty Included', 'Expert Support', 'Fast Shipping']
+        };
+      case 'Hotels':
+        return {
+          title: 'Luxury Accommodations Worldwide',
+          description: 'Experience comfort and luxury with our handpicked selection of premium hotels and resorts around the globe.',
+          features: ['5-Star Properties', 'Prime Locations', 'Spa & Wellness', 'Concierge Services']
+        };
+      case 'Cars':
+        return {
+          title: 'Premium Vehicles & Rentals',
+          description: 'Drive in style with our collection of luxury vehicles and premium car rental options for every occasion.',
+          features: ['Luxury Fleet', 'Flexible Rentals', 'Insurance Included', '24/7 Support']
+        };
+      case 'Furniture':
+        return {
+          title: 'Modern Home Furnishing',
+          description: 'Transform your space with our curated collection of modern furniture and home decor from top designers.',
+          features: ['Designer Collections', 'Quality Materials', 'Custom Options', 'White Glove Delivery']
+        };
+      case 'Beverage':
+        return {
+          title: 'Premium Drinks & Beverages',
+          description: 'Indulge in our selection of premium beverages, from fine wines to artisanal coffee and craft spirits.',
+          features: ['Curated Selection', 'Rare Finds', 'Expert Recommendations', 'Temperature Controlled Shipping']
+        };
+      default:
+        return {
+          title: 'Premium Products',
+          description: 'Discover our curated selection of premium products.',
+          features: ['Quality Guaranteed', 'Fast Shipping', 'Expert Support', 'Miles Rewards']
+        };
+    }
+  };
+
+  const categoryInfo = getCategoryDescription(categoryName);
 
   return (
     <>
