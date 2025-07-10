@@ -176,6 +176,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index, onView
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleAddToCart}
             onClick={(e) => {
               e.stopPropagation();
               handleAddToCart();
@@ -195,6 +196,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index, onView
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handlePurchase}
             onClick={(e) => {
               e.stopPropagation();
               handlePurchase();

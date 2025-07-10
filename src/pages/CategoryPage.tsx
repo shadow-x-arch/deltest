@@ -186,6 +186,12 @@ export const CategoryPage: React.FC = () => {
     console.log('Category name:', categoryName);
     console.log('Products in category:', products.filter(p => p.category === categoryName).length);
     
+    let filtered = products.filter(product => {
+      return product.category === categoryName;
+    });
+      // Filter products by category
+      return product.category === categoryName;
+    });
 
     // Apply search filter
     if (searchQuery.trim()) {
