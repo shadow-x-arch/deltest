@@ -1,29 +1,29 @@
 import { Product, Bonus } from '../types';
 
 export const demoProducts: Product[] = [
-  // Travel - Flights (Premium Routes)
+  // Travel - Flights
   {
     id: 'flight-001',
-    name: 'First Class to Dubai',
+    name: 'First Class Emirates A380 Dubai',
     amount: 5200,
     rate: 4.9,
     status: 'Available',
     miles: 10400,
-    text: 'Luxury first-class experience with private suites, gourmet dining, and spa services on Emirates A380.',
+    text: 'Luxury first-class experience with private suites, onboard shower spa, and gourmet dining on the world\'s largest passenger aircraft.',
     orders: 127,
-    types: 'First Class',
+    types: 'First Class Suite',
     category: 'Travel',
     subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'flight-002',
-    name: 'Business Class to Singapore',
+    name: 'Singapore Airlines Business Class',
     amount: 3800,
     rate: 4.8,
     status: 'Available',
     miles: 7600,
-    text: 'Singapore Airlines business class with lie-flat beds, premium dining, and award-winning service.',
+    text: 'Award-winning business class with lie-flat beds, premium dining, and exceptional service to Singapore.',
     orders: 234,
     types: 'Business Class',
     category: 'Travel',
@@ -32,12 +32,12 @@ export const demoProducts: Product[] = [
   },
   {
     id: 'flight-003',
-    name: 'Premium Economy to Sydney',
+    name: 'Lufthansa Premium Economy',
     amount: 2100,
     rate: 4.6,
     status: 'Limited',
     miles: 4200,
-    text: 'Qantas premium economy with extra space, priority boarding, and enhanced meal service.',
+    text: 'Enhanced comfort with extra legroom, priority boarding, and premium meal service to European destinations.',
     orders: 456,
     types: 'Premium Economy',
     category: 'Travel',
@@ -46,12 +46,12 @@ export const demoProducts: Product[] = [
   },
   {
     id: 'flight-004',
-    name: 'Business Class to São Paulo',
+    name: 'JAL Business Class Tokyo',
     amount: 4100,
     rate: 4.7,
     status: 'Available',
     miles: 8200,
-    text: 'LATAM business class with fully flat beds, premium lounge access, and South American cuisine.',
+    text: 'Japanese hospitality at its finest with SKYTRAX 5-star service and authentic Japanese cuisine.',
     orders: 189,
     types: 'Business Class',
     category: 'Travel',
@@ -59,7 +59,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Travel - Hotels (Luxury Accommodations)
+  // Travel - Hotels
   {
     id: 'hotel-001',
     name: 'Burj Al Arab Royal Suite',
@@ -67,7 +67,7 @@ export const demoProducts: Product[] = [
     rate: 5.0,
     status: 'Limited',
     miles: 2400,
-    text: 'Iconic sail-shaped hotel\'s royal suite with panoramic views, butler service, and gold-plated fixtures.',
+    text: 'Iconic sail-shaped hotel\'s royal suite with panoramic views, 24-carat gold fixtures, and personal butler service.',
     orders: 89,
     types: 'Royal Suite',
     category: 'Travel',
@@ -81,7 +81,7 @@ export const demoProducts: Product[] = [
     rate: 4.9,
     status: 'Available',
     miles: 1900,
-    text: 'Luxury suite with access to the famous infinity pool, premium shopping, and world-class dining.',
+    text: 'Luxury suite with access to the famous infinity pool, premium shopping, and world-class dining experiences.',
     orders: 156,
     types: 'Infinity Suite',
     category: 'Travel',
@@ -90,34 +90,34 @@ export const demoProducts: Product[] = [
   },
   {
     id: 'hotel-003',
-    name: 'Sydney Harbour Bridge Suite',
+    name: 'Ritz-Carlton Kyoto Deluxe',
     amount: 780,
     rate: 4.8,
     status: 'Available',
     miles: 1560,
-    text: 'Waterfront luxury with Opera House views, private balcony, and exclusive harbor experiences.',
+    text: 'Traditional Japanese luxury with modern amenities, garden views, and authentic cultural experiences.',
     orders: 234,
-    types: 'Harbour Suite',
+    types: 'Deluxe Garden View',
     category: 'Travel',
     subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
     id: 'hotel-004',
-    name: 'Copacabana Palace Penthouse',
-    amount: 890,
-    rate: 4.7,
+    name: 'Four Seasons Bora Bora',
+    amount: 1100,
+    rate: 4.9,
     status: 'Available',
-    miles: 1780,
-    text: 'Beachfront penthouse with panoramic ocean views, private terrace, and Brazilian luxury service.',
+    miles: 2200,
+    text: 'Overwater bungalow with direct lagoon access, private beach, and stunning Mount Otemanu views.',
     orders: 167,
-    types: 'Penthouse',
+    types: 'Overwater Bungalow',
     category: 'Travel',
     subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Electronics - Smartphones (Latest Flagships)
+  // Electronics - Smartphones
   {
     id: 'phone-001',
     name: 'iPhone 15 Pro Max Titanium',
@@ -139,7 +139,7 @@ export const demoProducts: Product[] = [
     rate: 4.8,
     status: 'Available',
     miles: 2598,
-    text: 'AI-powered flagship with S Pen, 200MP camera, titanium frame, and Galaxy AI features.',
+    text: 'AI-powered flagship with S Pen, 200MP camera, titanium frame, and Galaxy AI features for productivity.',
     orders: 1876,
     types: '512GB Titanium Gray',
     category: 'Electronics',
@@ -153,7 +153,7 @@ export const demoProducts: Product[] = [
     rate: 4.7,
     status: 'Available',
     miles: 2198,
-    text: 'Google\'s most advanced AI photography, Magic Eraser, and 7 years of OS updates guaranteed.',
+    text: 'Google\'s most advanced AI photography with Magic Eraser, Best Take, and 7 years of OS updates.',
     orders: 1234,
     types: '256GB Obsidian',
     category: 'Electronics',
@@ -167,7 +167,7 @@ export const demoProducts: Product[] = [
     rate: 4.6,
     status: 'Available',
     miles: 1798,
-    text: 'Snapdragon 8 Gen 3 powerhouse with 100W SuperVOOC charging and Hasselblad camera system.',
+    text: 'Snapdragon 8 Gen 3 powerhouse with 100W SuperVOOC charging and Hasselblad camera collaboration.',
     orders: 987,
     types: '512GB Silky Black',
     category: 'Electronics',
@@ -175,7 +175,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Electronics - Laptops (Professional Workstations)
+  // Electronics - Laptops
   {
     id: 'laptop-001',
     name: 'MacBook Pro 16" M3 Max',
@@ -197,7 +197,7 @@ export const demoProducts: Product[] = [
     rate: 4.8,
     status: 'Available',
     miles: 6398,
-    text: 'Professional creator laptop with 4K OLED display, RTX 4080, and premium carbon fiber build.',
+    text: 'Professional creator laptop with 4K OLED display, RTX 4080, and premium carbon fiber construction.',
     orders: 234,
     types: '64GB RAM RTX 4080',
     category: 'Electronics',
@@ -206,7 +206,7 @@ export const demoProducts: Product[] = [
   },
   {
     id: 'laptop-003',
-    name: 'ThinkPad X1 Extreme',
+    name: 'ThinkPad X1 Extreme Gen 5',
     amount: 2899,
     rate: 4.7,
     status: 'Available',
@@ -233,7 +233,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Electronics - Gadgets (Premium Tech Accessories)
+  // Electronics - Gadgets
   {
     id: 'gadget-001',
     name: 'AirPods Max Space Gray',
@@ -291,7 +291,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Cars - Luxury Cars (Premium Vehicles)
+  // Cars - Luxury Cars
   {
     id: 'luxury-001',
     name: 'Rolls-Royce Phantom VIII',
@@ -299,7 +299,7 @@ export const demoProducts: Product[] = [
     rate: 5.0,
     status: 'Limited',
     miles: 97000,
-    text: 'The pinnacle of luxury motoring with handcrafted interior, whisper-quiet cabin, and bespoke options.',
+    text: 'The pinnacle of luxury motoring with handcrafted interior, whisper-quiet cabin, and bespoke customization.',
     orders: 8,
     types: 'Extended Wheelbase',
     category: 'Cars',
@@ -313,7 +313,7 @@ export const demoProducts: Product[] = [
     rate: 4.9,
     status: 'Available',
     miles: 57000,
-    text: 'Grand touring excellence with W12 engine, diamond-quilted leather, and handcrafted luxury.',
+    text: 'Grand touring excellence with W12 engine, diamond-quilted leather, and handcrafted British luxury.',
     orders: 23,
     types: 'Convertible',
     category: 'Cars',
@@ -349,7 +349,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Cars - Electric Cars (Future Mobility)
+  // Cars - Electric Cars
   {
     id: 'electric-001',
     name: 'Porsche Taycan Turbo S',
@@ -407,7 +407,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Cars - Car Rental (Premium Fleet)
+  // Cars - Car Rental
   {
     id: 'rental-001',
     name: 'Mercedes S-Class Rental',
@@ -465,7 +465,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // House & Furniture - House Rent (Premium Properties)
+  // House & Furniture - House Rent
   {
     id: 'rent-001',
     name: 'Tribeca Penthouse Loft',
@@ -523,7 +523,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // House & Furniture - House Sale (Investment Properties)
+  // House & Furniture - House Sale
   {
     id: 'sale-001',
     name: 'Beverly Hills Estate',
@@ -581,7 +581,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // House & Furniture - Furniture (Designer Collections)
+  // House & Furniture - Furniture
   {
     id: 'furniture-001',
     name: 'Herman Miller Eames Lounge',
@@ -639,9 +639,67 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Beverage (Premium Collections)
+  // House & Furniture - Decoration
   {
-    id: 'beverage-001',
+    id: 'decoration-001',
+    name: 'Baccarat Crystal Chandelier',
+    amount: 25000,
+    rate: 5.0,
+    status: 'Limited',
+    miles: 50000,
+    text: 'Exquisite French crystal chandelier with hand-cut crystals and gold-plated bronze fittings.',
+    orders: 8,
+    types: 'Grand Salon',
+    category: 'House & Furniture',
+    subcategory: 'Decoration',
+    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'decoration-002',
+    name: 'Persian Silk Carpet Isfahan',
+    amount: 18000,
+    rate: 4.9,
+    status: 'Available',
+    miles: 36000,
+    text: 'Hand-knotted silk carpet from Isfahan with intricate patterns and museum-quality craftsmanship.',
+    orders: 15,
+    types: '9x12 Silk',
+    category: 'House & Furniture',
+    subcategory: 'Decoration',
+    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'decoration-003',
+    name: 'Murano Glass Art Sculpture',
+    amount: 8500,
+    rate: 4.8,
+    status: 'Available',
+    miles: 17000,
+    text: 'Contemporary Murano glass sculpture by master artisan with vibrant colors and flowing forms.',
+    orders: 23,
+    types: 'Limited Edition',
+    category: 'House & Furniture',
+    subcategory: 'Decoration',
+    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'decoration-004',
+    name: 'Hermès Avalon Throw Blanket',
+    amount: 1200,
+    rate: 4.7,
+    status: 'Available',
+    miles: 2400,
+    text: 'Luxury cashmere and wool throw with iconic Hermès design and exceptional softness.',
+    orders: 156,
+    types: 'Cashmere Blend',
+    category: 'House & Furniture',
+    subcategory: 'Decoration',
+    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+
+  // Beverage - Alcohol
+  {
+    id: 'alcohol-001',
     name: 'Dom Pérignon Vintage 2015',
     amount: 450,
     rate: 4.9,
@@ -651,10 +709,11 @@ export const demoProducts: Product[] = [
     orders: 156,
     types: 'Vintage Champagne',
     category: 'Beverage',
+    subcategory: 'Alcohol',
     image: 'https://images.pexels.com/photos/434311/pexels-photo-434311.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    id: 'beverage-002',
+    id: 'alcohol-002',
     name: 'Macallan 30 Year Sherry Oak',
     amount: 3500,
     rate: 5.0,
@@ -664,23 +723,11 @@ export const demoProducts: Product[] = [
     orders: 23,
     types: 'Single Malt Whisky',
     category: 'Beverage',
+    subcategory: 'Alcohol',
     image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    id: 'beverage-003',
-    name: 'Kopi Luwak Premium Coffee',
-    amount: 180,
-    rate: 4.8,
-    status: 'Available',
-    miles: 360,
-    text: 'World\'s most exclusive coffee with unique processing method and extraordinary flavor profile.',
-    orders: 89,
-    types: 'Whole Bean',
-    category: 'Beverage',
-    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: 'beverage-004',
+    id: 'alcohol-003',
     name: 'Château Pétrus 2010',
     amount: 4200,
     rate: 5.0,
@@ -690,10 +737,11 @@ export const demoProducts: Product[] = [
     orders: 12,
     types: 'Bordeaux Wine',
     category: 'Beverage',
+    subcategory: 'Alcohol',
     image: 'https://images.pexels.com/photos/434311/pexels-photo-434311.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    id: 'beverage-005',
+    id: 'alcohol-004',
     name: 'Hennessy Paradis Imperial',
     amount: 850,
     rate: 4.9,
@@ -703,23 +751,11 @@ export const demoProducts: Product[] = [
     orders: 67,
     types: 'Premium Cognac',
     category: 'Beverage',
+    subcategory: 'Alcohol',
     image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    id: 'beverage-006',
-    name: 'Da Hong Pao Oolong Tea',
-    amount: 120,
-    rate: 4.7,
-    status: 'Available',
-    miles: 240,
-    text: 'Legendary Chinese oolong tea with complex flavor and centuries of cultivation tradition.',
-    orders: 134,
-    types: 'Premium Oolong',
-    category: 'Beverage',
-    image: 'https://images.pexels.com/photos/230477/pexels-photo-230477.jpeg?auto=compress&cs=tinysrgb&w=400'
-  },
-  {
-    id: 'beverage-007',
+    id: 'alcohol-005',
     name: 'Armand de Brignac Ace of Spades',
     amount: 650,
     rate: 4.8,
@@ -729,10 +765,55 @@ export const demoProducts: Product[] = [
     orders: 78,
     types: 'Brut Gold',
     category: 'Beverage',
+    subcategory: 'Alcohol',
     image: 'https://images.pexels.com/photos/434311/pexels-photo-434311.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
-    id: 'beverage-008',
+    id: 'alcohol-006',
+    name: 'Johnnie Walker Blue Label',
+    amount: 220,
+    rate: 4.6,
+    status: 'Available',
+    miles: 440,
+    text: 'Premium blended Scotch whisky with rare whiskies from ghost distilleries.',
+    orders: 234,
+    types: 'Blended Whisky',
+    category: 'Beverage',
+    subcategory: 'Alcohol',
+    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+
+  // Beverage - Non-Alcohol
+  {
+    id: 'nonalcohol-001',
+    name: 'Kopi Luwak Premium Coffee',
+    amount: 180,
+    rate: 4.8,
+    status: 'Available',
+    miles: 360,
+    text: 'World\'s most exclusive coffee with unique processing method and extraordinary flavor profile.',
+    orders: 89,
+    types: 'Whole Bean',
+    category: 'Beverage',
+    subcategory: 'Non-Alcohol',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'nonalcohol-002',
+    name: 'Da Hong Pao Oolong Tea',
+    amount: 120,
+    rate: 4.7,
+    status: 'Available',
+    miles: 240,
+    text: 'Legendary Chinese oolong tea with complex flavor and centuries of cultivation tradition.',
+    orders: 134,
+    types: 'Premium Oolong',
+    category: 'Beverage',
+    subcategory: 'Non-Alcohol',
+    image: 'https://images.pexels.com/photos/230477/pexels-photo-230477.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'nonalcohol-003',
     name: 'Blue Mountain Coffee Reserve',
     amount: 95,
     rate: 4.6,
@@ -742,7 +823,50 @@ export const demoProducts: Product[] = [
     orders: 234,
     types: 'Single Origin',
     category: 'Beverage',
+    subcategory: 'Non-Alcohol',
     image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'nonalcohol-004',
+    name: 'Himalayan Spring Water',
+    amount: 45,
+    rate: 4.5,
+    status: 'Available',
+    miles: 90,
+    text: 'Pure spring water from pristine Himalayan glaciers with natural mineral content.',
+    orders: 567,
+    types: 'Natural Spring',
+    category: 'Beverage',
+    subcategory: 'Non-Alcohol',
+    image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'nonalcohol-005',
+    name: 'Matcha Ceremonial Grade',
+    amount: 85,
+    rate: 4.7,
+    status: 'Available',
+    miles: 170,
+    text: 'Premium ceremonial grade matcha from Uji, Japan with vibrant color and umami flavor.',
+    orders: 189,
+    types: 'Ceremonial Grade',
+    category: 'Beverage',
+    subcategory: 'Non-Alcohol',
+    image: 'https://images.pexels.com/photos/230477/pexels-photo-230477.jpeg?auto=compress&cs=tinysrgb&w=400'
+  },
+  {
+    id: 'nonalcohol-006',
+    name: 'Artisanal Kombucha Collection',
+    amount: 35,
+    rate: 4.4,
+    status: 'Available',
+    miles: 70,
+    text: 'Craft kombucha with organic ingredients and live probiotics for health and flavor.',
+    orders: 345,
+    types: 'Probiotic Blend',
+    category: 'Beverage',
+    subcategory: 'Non-Alcohol',
+    image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400'
   }
 ];
 
