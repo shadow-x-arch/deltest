@@ -8,7 +8,7 @@ export interface Product {
   text: string;
   orders: number;
   types: string;
-  category: 'Flights' | 'Electronics' | 'Hotels' | 'Cars' | 'Furniture' | 'Beverage';
+  category: 'Travel' | 'Electronics' | 'Cars' | 'Furniture' | 'Beverage';
   image?: string;
 }
 
