@@ -6,6 +6,10 @@ import { HomePage } from './pages/HomePage';
 import { TravelLandingPage } from './pages/TravelLandingPage';
 import { FlightsPage } from './pages/FlightsPage';
 import { HotelsPage } from './pages/HotelsPage';
+import { HouseFurnitureLandingPage } from './pages/HouseFurnitureLandingPage';
+import { HouseRentPage } from './pages/HouseRentPage';
+import { HouseSalePage } from './pages/HouseSalePage';
+import { FurniturePage } from './pages/FurniturePage';
 import { CategoryPage } from './pages/CategoryPage';
 import { CartPage } from './pages/CartPage';
 import { AccountPage } from './pages/AccountPage';
@@ -36,9 +40,12 @@ function App() {
             <Route path="/travel" element={<TravelLandingPage />} />
             <Route path="/travel/flights" element={<FlightsPage />} />
             <Route path="/travel/hotels" element={<HotelsPage />} />
+            <Route path="/house-furniture" element={<HouseFurnitureLandingPage />} />
+            <Route path="/house-furniture/rent" element={<HouseRentPage />} />
+            <Route path="/house-furniture/sale" element={<HouseSalePage />} />
+            <Route path="/house-furniture/furniture" element={<FurniturePage />} />
             <Route path="/electronics" element={<CategoryPage />} />
             <Route path="/cars" element={<CategoryPage />} />
-            <Route path="/furniture" element={<CategoryPage />} />
             <Route path="/beverage" element={<CategoryPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/account" element={<AccountPage />} />

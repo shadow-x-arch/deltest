@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { useLocation, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Filter, SortAsc, SortDesc } from 'lucide-react';
+import { Filter, SortAsc, SortDesc, ArrowLeft, Key } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { ProductCard } from '../components/ProductCard';
 import { RewardsPanel } from '../components/RewardsPanel';
 import { ProductDetailModal } from '../components/ProductDetailModal';
@@ -10,82 +10,21 @@ import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
 import { Product } from '../types';
 
-const categoryMapping: Record<string, Product['category']> = {
-  '/travel': 'Travel',
-  '/electronics': 'Electronics',
-  '/cars': 'Cars',
-  '/house-furniture': 'House & Furniture',
-  '/beverage': 'Beverage'
-};
-
-const getCategoryColors = (category: Product['category']) => {
-  switch (category) {
-    case 'Travel':
-      return {
-        gradient: 'from-slate-300 via-blue-100 to-white',
-        bg: 'bg-gradient-to-b from-slate-200 via-blue-50 to-white dark:from-slate-800 dark:via-blue-900/30 dark:to-gray-900',
-        text: 'text-slate-700 dark:text-slate-300',
-        border: 'border-slate-200 dark:border-slate-700'
-      };
-    case 'Electronics':
-      return {
-        gradient: 'from-purple-500 to-purple-600',
-        bg: 'bg-purple-50 dark:bg-purple-900/20',
-        text: 'text-purple-700 dark:text-purple-400',
-        border: 'border-purple-200 dark:border-purple-700'
-      };
-    case 'Cars':
-      return {
-        gradient: 'from-red-500 to-red-600',
-        bg: 'bg-red-50 dark:bg-red-900/20',
-        text: 'text-red-700 dark:text-red-400',
-        border: 'border-red-200 dark:border-red-700'
-      };
-    case 'Furniture':
-      return {
-        gradient: 'from-amber-500 to-amber-600',
-        bg: 'bg-amber-50 dark:bg-amber-900/20',
-        text: 'text-amber-700 dark:text-amber-400',
-        border: 'border-amber-200 dark:border-amber-700'
-      };
-    case 'Beverage':
-      return {
-        gradient: 'from-pink-500 to-pink-600',
-        bg: 'bg-pink-50 dark:bg-pink-900/20',
-        text: 'text-pink-700 dark:text-pink-400',
-        border: 'border-pink-200 dark:border-pink-700'
-      };
-    default:
-      return {
-        gradient: 'from-gray-500 to-gray-600',
-        bg: 'bg-gray-50 dark:bg-gray-900/20',
-        text: 'text-gray-700 dark:text-gray-400',
-        border: 'border-gray-200 dark:border-gray-700'
-      };
-  }
-};
-
-export const CategoryPage: React.FC = () => {
-  const location = useLocation();
+export const HouseRentPage: React.FC = () => {
   const { products } = useStore();
   const { isDarkMode } = useTheme();
-  const [sortBy, setSortBy] = React.useState<'name' | 'price' | 'rating' | 'miles'>('name');
-  const [sortOrder, setSortOrder] = React.useState<'asc' | 'desc'>('asc');
-  const [filterBy, setFilterBy] = React.useState<'all' | 'available' | 'limited'>('all');
-  const [priceRange, setPriceRange] = React.useState<'all' | 'low' | 'mid' | 'high'>('all');
-  const [selectedProduct, setSelectedProduct] = React.useState<Product | null>(null);
-  const [showProductModal, setShowProductModal] = React.useState(false);
-  const [searchQuery, setSearchQuery] = React.useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'miles'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [filterBy, setFilterBy] = useState<'all' | 'available' | 'limited'>('all');
+  const [priceRange, setPriceRange] = useState<'all' | 'low' | 'mid' | 'high'>('all');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [showProductModal, setShowProductModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const categoryName = categoryMapping[location.pathname];
-  const categoryColors = getCategoryColors(categoryName);
-  
-  if (!categoryName) {
-    return <Navigate to="/electronics" replace />;
-  }
-  
   const filteredProducts = useMemo(() => {
-    let filtered = products.filter(product => product.category === categoryName);
+    let filtered = products.filter(product => 
+      product.category === 'House & Furniture' && product.subcategory === 'House Rent'
+    );
 
     // Apply search filter
     if (searchQuery.trim()) {
@@ -109,11 +48,11 @@ export const CategoryPage: React.FC = () => {
     // Apply price range filter
     if (priceRange !== 'all') {
       if (priceRange === 'low') {
-        filtered = filtered.filter(product => product.amount < 100);
+        filtered = filtered.filter(product => product.amount < 2000);
       } else if (priceRange === 'mid') {
-        filtered = filtered.filter(product => product.amount >= 100 && product.amount < 1000);
+        filtered = filtered.filter(product => product.amount >= 2000 && product.amount < 5000);
       } else if (priceRange === 'high') {
-        filtered = filtered.filter(product => product.amount >= 1000);
+        filtered = filtered.filter(product => product.amount >= 5000);
       }
     }
 
@@ -140,57 +79,12 @@ export const CategoryPage: React.FC = () => {
     });
 
     return filtered;
-  }, [products, categoryName, sortBy, sortOrder, filterBy, priceRange, searchQuery]);
-
-  const categoryDisplayName = categoryName.toLowerCase();
+  }, [products, sortBy, sortOrder, filterBy, priceRange, searchQuery]);
 
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
     setShowProductModal(true);
   };
-
-  const getCategoryDescription = (category: Product['category']) => {
-    switch (category) {
-      case 'Travel':
-        return {
-          title: 'Explore the World with Premium Travel',
-          description: 'Discover amazing destinations with our curated selection of premium flights and luxury accommodations. Earn miles with every booking and enjoy exclusive travel benefits.',
-          features: ['Premium Flights & Hotels', 'Direct Routes Available', 'Luxury Accommodations', 'Exclusive Travel Benefits']
-        };
-      case 'Electronics':
-        return {
-          title: 'Latest Technology & Gadgets',
-          description: 'Stay ahead with cutting-edge electronics and innovative gadgets. From smartphones to smart home devices, find everything you need.',
-          features: ['Latest Models Available', 'Warranty Included', 'Expert Support', 'Fast Shipping']
-        };
-      case 'Cars':
-        return {
-      case 'House & Furniture':
-          description: 'Drive in style with our collection of luxury vehicles and premium car rental options for every occasion.',
-          features: ['Luxury Fleet', 'Flexible Rentals', 'Insurance Included', '24/7 Support']
-        };
-      case 'House & Furniture':
-        return {
-          title: 'Modern Home Furnishing',
-          description: 'Transform your space with our curated collection of modern furniture and home decor from top designers.',
-          features: ['Designer Collections', 'Quality Materials', 'Custom Options', 'White Glove Delivery']
-        };
-      case 'Beverage':
-        return {
-          title: 'Premium Drinks & Beverages',
-          description: 'Indulge in our selection of premium beverages, from fine wines to artisanal coffee and craft spirits.',
-          features: ['Curated Selection', 'Rare Finds', 'Expert Recommendations', 'Temperature Controlled Shipping']
-        };
-      default:
-        return {
-          title: 'Premium Products',
-          description: 'Discover our curated selection of premium products.',
-          features: ['Quality Guaranteed', 'Fast Shipping', 'Expert Support', 'Miles Rewards']
-        };
-    }
-  };
-
-  const categoryInfo = getCategoryDescription(categoryName);
 
   return (
     <>
@@ -201,50 +95,65 @@ export const CategoryPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-3">
+              {/* Breadcrumb */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-2 mb-6"
+              >
+                <Link
+                  to="/house-furniture"
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                    isDarkMode
+                      ? 'hover:bg-gray-800 text-gray-400'
+                      : 'hover:bg-gray-100 text-gray-600'
+                  }`}
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to House & Furniture
+                </Link>
+              </motion.div>
+
               {/* Category Hero Section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-8"
               >
-                <div className={`p-8 rounded-xl border ${categoryColors.bg} ${categoryColors.border} relative overflow-hidden ${
-                  categoryName === 'Flights' ? 'min-h-[300px]' : ''
-                }`}>
+                <div className={`p-8 rounded-xl border bg-gradient-to-b from-blue-50 via-cyan-50 to-white dark:from-blue-900/30 dark:via-cyan-900/30 dark:to-gray-900 border-blue-200 dark:border-blue-700 relative overflow-hidden`}>
                   <div className="relative z-10">
-                    <h1 className={`text-4xl font-bold mb-4 ${categoryColors.text}`}>
-                      {categoryInfo.title}
-                    </h1>
-                    <p className={`text-lg mb-6 ${categoryColors.text} opacity-90`}>
-                      {categoryInfo.description}
-                    </p>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl">
+                        <Key className="w-8 h-8 text-white" />
+                      </div>
+                      <div>
+                        <h1 className={`text-4xl font-bold text-blue-700 dark:text-blue-300`}>
+                          Houses for Rent
+                        </h1>
+                        <p className={`text-lg text-blue-700 dark:text-blue-300 opacity-90`}>
+                          Find your perfect rental home with verified listings and virtual tours
+                        </p>
+                      </div>
+                    </div>
                     
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                      {categoryInfo.features.map((feature, index) => (
-                        <div key={index} className={`flex items-center gap-2 ${categoryColors.text} opacity-80`}>
-                          <div className={`w-2 h-2 rounded-full ${categoryColors.text.replace('text-', 'bg-')} opacity-60`} />
+                      {['Verified Listings', 'Virtual Tours', 'Quick Move-in', 'Miles Rewards'].map((feature, index) => (
+                        <div key={index} className={`flex items-center gap-2 text-blue-700 dark:text-blue-300 opacity-80`}>
+                          <div className={`w-2 h-2 rounded-full bg-blue-700 dark:bg-blue-300 opacity-60`} />
                           <span className="text-sm font-medium">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <div className={`text-sm ${categoryColors.text} opacity-70`}>
-                      {filteredProducts.length} products available • Earn miles with every purchase
+                    <div className={`text-sm text-blue-700 dark:text-blue-300 opacity-70`}>
+                      {filteredProducts.length} rental properties available • Earn miles with every lease
                     </div>
                   </div>
                   
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-64 h-64 opacity-20">
-                    {categoryName === 'Travel' ? (
-                      <div className="w-full h-full">
-                        {/* Subtle cloud-like shapes for travel */}
-                        <div className="absolute top-8 right-8 w-32 h-16 bg-white/30 rounded-full blur-sm" />
-                        <div className="absolute top-16 right-16 w-24 h-12 bg-white/20 rounded-full blur-sm" />
-                        <div className="absolute top-24 right-4 w-20 h-10 bg-white/25 rounded-full blur-sm" />
-                      </div>
-                    ) : (
-                      <div className={`w-full h-full rounded-full ${categoryColors.text.replace('text-', 'bg-')} transform translate-x-32 -translate-y-32`} />
-                    )}
+                    <div className={`w-full h-full rounded-full bg-blue-700 dark:bg-blue-300 transform translate-x-32 -translate-y-32`} />
                   </div>
                 </div>
               </motion.div>
@@ -258,7 +167,7 @@ export const CategoryPage: React.FC = () => {
               >
                 <SearchBar
                   onSearch={setSearchQuery}
-                  placeholder={`Search ${categoryName === 'Travel' ? 'flights & hotels' : categoryName.toLowerCase()}...`}
+                  placeholder="Search rentals by location, type, or amenities..."
                 />
               </motion.div>
 
@@ -311,9 +220,9 @@ export const CategoryPage: React.FC = () => {
                     }`}
                   >
                     <option value="all">All Prices</option>
-                    <option value="low">Under $100</option>
-                    <option value="mid">$100 - $1,000</option>
-                    <option value="high">Over $1,000</option>
+                    <option value="low">Under $2,000</option>
+                    <option value="mid">$2,000 - $5,000</option>
+                    <option value="high">Over $5,000</option>
                   </select>
 
                   {/* Sort Options */}
@@ -371,9 +280,9 @@ export const CategoryPage: React.FC = () => {
                     isDarkMode ? 'text-gray-400' : 'text-gray-500'
                   }`}
                 >
-                  <div className="text-6xl mb-4">🛍️</div>
-                  <h3 className="text-xl font-medium mb-2">No products found</h3>
-                  <p>Try browsing other categories or add some products!</p>
+                  <div className="text-6xl mb-4">🏠</div>
+                  <h3 className="text-xl font-medium mb-2">No rental properties found</h3>
+                  <p>Try adjusting your search or filters to find more options!</p>
                 </motion.div>
               )}
             </div>

@@ -28,7 +28,7 @@ const categories = [
   { name: 'Travel', path: '/travel', icon: Plane },
   { name: 'Electronics', path: '/electronics', icon: Smartphone },
   { name: 'Cars', path: '/cars', icon: Car },
-  { name: 'Furniture', path: '/furniture', icon: Sofa },
+  { name: 'House & Furniture', path: '/house-furniture', icon: Sofa },
   { name: 'Beverage', path: '/beverage', icon: Coffee },
 ];
 
