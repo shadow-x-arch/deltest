@@ -165,7 +165,7 @@ export const CategoryPage: React.FC = () => {
         };
       case 'Cars':
         return {
-      case 'House & Furniture':
+          title: 'Premium Vehicles & Car Rentals',
           description: 'Drive in style with our collection of luxury vehicles and premium car rental options for every occasion.',
           features: ['Luxury Fleet', 'Flexible Rentals', 'Insurance Included', '24/7 Support']
         };
