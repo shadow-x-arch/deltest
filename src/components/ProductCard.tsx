@@ -8,9 +8,10 @@ import { useTheme } from '../hooks/useTheme';
 interface ProductCardProps {
   product: Product;
   index: number;
+  onViewDetails?: (product: Product) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, index, onViewDetails }) => {
   const { purchaseProduct, addToCart, activeDiscount } = useStore();
   const { isDarkMode } = useTheme();
 
@@ -60,11 +61,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      onClick={() => onViewDetails?.(product)}
       className={`group relative overflow-hidden rounded-xl border transition-all duration-300 hover:shadow-lg ${
         isDarkMode
           ? 'bg-gray-800 border-gray-700 hover:border-gray-600'
           : 'bg-white border-gray-200 hover:border-gray-300'
-      }`}
+      } cursor-pointer`}
     >
       {/* Discount Badge */}
       {activeDiscount > 0 && (
@@ -172,6 +174,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleAddToCart}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAddToCart();
+            }}
             disabled={product.status === 'Out of Stock'}
             className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg font-medium transition-all ${
               product.status === 'Out of Stock'
@@ -188,6 +194,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handlePurchase}
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePurchase();
+            }}
             disabled={product.status === 'Out of Stock'}
             className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg font-medium transition-all ${
               product.status === 'Out of Stock'
