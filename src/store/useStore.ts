@@ -1,19 +1,18 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { toast } from 'sonner';
+import i18n from '../i18n';
 import { Product, User, Bonus, CartItem, Order } from '../types';
 import { demoProducts, bonusRewards } from '../data/demoData';
 
 interface StoreState {
   products: Product[];
   user: User;
-  language: string;
   isAdminAuthenticated: boolean;
   bonuses: Bonus[];
   cart: CartItem[];
   orders: Order[];
   activeDiscount: number;
-  setLanguage: (language: string) => void;
   registerUser: (userData: { name: string; email: string; password: string }) => boolean;
   adminLogin: (password: string) => boolean;
   adminLogout: () => void;
@@ -41,27 +40,23 @@ export const useStore = create<StoreState>()(
         name: 'John Doe',
         miles: 1250
       },
-      language: 'en',
       isAdminAuthenticated: false,
       bonuses: bonusRewards,
       cart: [],
       orders: [],
       activeDiscount: 0,
       
-      setLanguage: (language) => {
-        set({ language });
-      },
 
       registerUser: (userData) => {
         // Simple registration - in production, use proper authentication
         // Check if email already exists (mock check)
         if (userData.email === 'existing@example.com') {
-          toast.error('Email already exists');
+          toast.error(i18n.t('notifications.emailExists'));
           return false;
         }
         
         // In a real app, you would send this to your backend
-        toast.success(`Welcome ${userData.name}! Your account has been created successfully.`);
+        toast.success(i18n.t('notifications.welcome', { name: userData.name }));
         return true;
       },
 
@@ -69,16 +64,16 @@ export const useStore = create<StoreState>()(
         // Simple password check - in production, use proper authentication
         if (password === 'admin123') {
           set({ isAdminAuthenticated: true });
-          toast.success('Admin login successful');
+          toast.success(i18n.t('notifications.adminLoginSuccess'));
           return true;
         }
-        toast.error('Invalid admin password');
+        toast.error(i18n.t('notifications.adminLoginError'));
         return false;
       },
 
       adminLogout: () => {
         set({ isAdminAuthenticated: false });
-        toast.info('Admin logged out successfully');
+        toast.info(i18n.t('notifications.adminLogout'));
       },
 
       addProduct: (product) => {
@@ -89,7 +84,7 @@ export const useStore = create<StoreState>()(
         set((state) => ({
           products: [...state.products, newProduct]
         }));
-        toast.success(`Product "${product.name}" added successfully`);
+        toast.success(i18n.t('notifications.productAdded', { name: product.name }));
       },
 
       updateProduct: (id, updates) => {
@@ -98,7 +93,7 @@ export const useStore = create<StoreState>()(
             product.id === id ? { ...product, ...updates } : product
           )
         }));
-        toast.success('Product updated successfully');
+        toast.success(i18n.t('notifications.productUpdated'));
       },
 
       deleteProduct: (id) => {
@@ -108,7 +103,7 @@ export const useStore = create<StoreState>()(
           products: state.products.filter(product => product.id !== id)
         }));
         if (product) {
-          toast.success(`Product "${product.name}" deleted successfully`);
+          toast.success(i18n.t('notifications.productDeleted', { name: product.name }));
         }
       },
 
@@ -116,7 +111,7 @@ export const useStore = create<StoreState>()(
         const state = get();
         const product = state.products.find(p => p.id === productId);
         if (!product || product.status === 'Out of Stock') {
-          toast.error('Product is not available for purchase');
+          toast.error(i18n.t('notifications.productNotAvailable'));
           return;
         }
 
@@ -138,8 +133,8 @@ export const useStore = create<StoreState>()(
           activeDiscount: 0 // Clear discount after use
         }));
         
-        toast.success(`🎉 Purchased ${product.name} and earned ${product.miles} miles!`, {
-          description: `Total spent: $${finalPrice.toLocaleString()}`
+        toast.success(i18n.t('notifications.purchased', { name: product.name, miles: product.miles }), {
+          description: i18n.t('notifications.purchasedDescription', { amount: finalPrice.toLocaleString() })
         });
       },
 
@@ -147,7 +142,7 @@ export const useStore = create<StoreState>()(
         const state = get();
         const product = state.products.find(p => p.id === productId);
         if (!product || product.status === 'Out of Stock') {
-          toast.error('Product is not available');
+          toast.error(i18n.t('notifications.productNotAvailableCart'));
           return;
         }
 
@@ -166,7 +161,7 @@ export const useStore = create<StoreState>()(
                 : item
             )
           }));
-          toast.success(`Updated ${product.name} quantity in cart`);
+          toast.success(i18n.t('notifications.updatedCartQuantity', { name: product.name }));
         } else {
           // Add new item to cart
           const cartItem: CartItem = {
@@ -183,8 +178,8 @@ export const useStore = create<StoreState>()(
           set((state) => ({
             cart: [...state.cart, cartItem]
           }));
-          toast.success(`Added ${product.name} to cart`, {
-            description: `${quantity} item${quantity > 1 ? 's' : ''} added`
+          toast.success(i18n.t('notifications.addedToCart', { name: product.name }), {
+            description: i18n.t(`notifications.addedToCartDescription${quantity > 1 ? '_plural' : ''}`, { count: quantity })
           });
         }
       },
@@ -196,7 +191,7 @@ export const useStore = create<StoreState>()(
           cart: state.cart.filter(item => item.productId !== productId)
         }));
         if (item) {
-          toast.info(`Removed ${item.name} from cart`);
+          toast.info(i18n.t('notifications.removedFromCart', { name: item.name }));
         }
       },
 
@@ -221,19 +216,19 @@ export const useStore = create<StoreState>()(
           )
         }));
         if (item) {
-          toast.info(`Updated ${item.name} quantity to ${quantity}`);
+          toast.info(i18n.t('notifications.updatedQuantity', { name: item.name, quantity }));
         }
       },
 
       clearCart: () => {
         set({ cart: [] });
-        toast.info('Cart cleared');
+        toast.info(i18n.t('notifications.cartCleared'));
       },
 
       checkout: () => {
         const state = get();
         if (state.cart.length === 0) {
-          toast.error('Your cart is empty');
+          toast.error(i18n.t('notifications.cartEmpty'));
           return;
         }
 
@@ -270,8 +265,8 @@ export const useStore = create<StoreState>()(
           cart: [],
           activeDiscount: 0
         }));
-        toast.success('🎉 Order placed successfully!', {
-          description: `Order #${newOrder.id.slice(-8)} • Earned ${finalMiles} miles`
+        toast.success(i18n.t('notifications.orderSuccess'), {
+          description: i18n.t('notifications.orderSuccessDescription', { orderId: newOrder.id.slice(-8), miles: finalMiles })
         });
       },
 
@@ -279,11 +274,11 @@ export const useStore = create<StoreState>()(
         const state = get();
         const bonus = state.bonuses.find(b => b.id === bonusId);
         if (!bonus || state.user.miles < bonus.milesRequired) {
-          toast.error('Not enough miles to redeem this bonus');
+          toast.error(i18n.t('notifications.notEnoughMiles'));
           return;
         }
         if (state.activeDiscount > 0) {
-          toast.error('You already have an active discount');
+          toast.error(i18n.t('notifications.activeDiscountExists'));
           return;
         }
 
@@ -295,14 +290,14 @@ export const useStore = create<StoreState>()(
           activeDiscount: bonus.discount
         }));
         
-        toast.success(`🎁 Redeemed ${bonus.name}!`, {
-          description: `Used ${bonus.milesRequired} miles • ${bonus.discount}% discount applied`
+        toast.success(i18n.t('notifications.bonusRedeemed', { name: bonus.name }), {
+          description: i18n.t('notifications.bonusRedeemedDescription', { miles: bonus.milesRequired, discount: bonus.discount })
         });
       },
 
       clearDiscount: () => {
         set({ activeDiscount: 0 });
-        toast.info('Discount cleared');
+        toast.info(i18n.t('notifications.discountCleared'));
       },
 
       addMiles: (miles) => {
@@ -312,7 +307,7 @@ export const useStore = create<StoreState>()(
             miles: state.user.miles + miles
           }
         }));
-        toast.success(`+${miles} miles added to your account!`);
+        toast.success(i18n.t('notifications.milesAdded', { miles }));
       },
 
       getCartTotal: () => {
@@ -328,7 +323,6 @@ export const useStore = create<StoreState>()(
       partialize: (state) => ({
         products: state.products,
         user: state.user,
-        language: state.language,
         isAdminAuthenticated: state.isAdminAuthenticated,
         cart: state.cart,
         orders: state.orders,

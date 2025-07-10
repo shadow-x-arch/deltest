@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": "Toonga",
+    "tagline": "تسوق بذكاء، اكسب أميال",
+    "register": "تسجيل",
+    "login": "تسجيل الدخول",
+    "admin": "مدير",
+    "dashboard": "لوحة التحكم",
+    "contact": "اتصال",
+    "cart": "عربة التسوق",
+    "categories": {
+      "flights": "رحلات",
+      "electronics": "إلكترونيات",
+      "hotels": "فنادق",
+      "cars": "سيارات",
+      "furniture": "أثاث",
+      "beverage": "مشروبات"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

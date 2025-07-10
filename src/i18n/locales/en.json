@@ -1,0 +1,330 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "header": {
+    "brand": "Toonga",
+    "tagline": "Shop Smart, Earn Miles",
+    "register": "Register",
+    "login": "Login",
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "contact": "Contact",
+    "cart": "Cart",
+    "categories": {
+      "flights": "Flights",
+      "electronics": "Electronics",
+      "hotels": "Hotels",
+      "cars": "Cars",
+      "furniture": "Furniture",
+      "beverage": "Beverage"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Shop Smart, Earn Miles",
+      "subtitle": "Discover amazing products across multiple categories and earn valuable miles with every purchase. Redeem your miles for exclusive discounts and rewards.",
+      "startShopping": "Start Shopping",
+      "milesAvailable": "Miles Available"
+    },
+    "stats": {
+      "productsAvailable": "Products Available",
+      "ordersCompleted": "Orders Completed",
+      "averageRating": "Average Rating"
+    },
+    "categories": {
+      "title": "Shop by Category",
+      "subtitle": "Explore our diverse collection of products across different categories",
+      "descriptions": {
+        "flights": "Book flights and earn travel miles",
+        "electronics": "Latest gadgets and tech",
+        "hotels": "Luxury stays worldwide",
+        "cars": "Premium vehicles and rentals",
+        "furniture": "Modern home furnishing",
+        "beverage": "Premium drinks and more"
+      }
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Discover some of our most popular products from various categories",
+      "viewAll": "View All Products"
+    }
+  },
+  "products": {
+    "status": {
+      "available": "Available",
+      "limited": "Limited",
+      "outOfStock": "Out of Stock"
+    },
+    "actions": {
+      "addToCart": "Add to Cart",
+      "buyNow": "Buy Now",
+      "viewDetails": "View Details"
+    },
+    "details": {
+      "description": "Description",
+      "milesReward": "Miles Reward",
+      "popularity": "Popularity",
+      "bestSeller": "Best Seller",
+      "popular": "Popular",
+      "new": "New",
+      "didYouKnow": "💡 Did you know?",
+      "milesEarnInfo": "You'll earn {{miles}} miles with this purchase, bringing you closer to exclusive rewards and discounts!"
+    },
+    "filters": {
+      "allStatus": "All Status",
+      "allPrices": "All Prices",
+      "under100": "Under $100",
+      "100to1000": "$100 - $1,000",
+      "over1000": "Over $1,000",
+      "sortBy": "Sort by:",
+      "name": "Name",
+      "price": "Price",
+      "rating": "Rating",
+      "miles": "Miles"
+    },
+    "search": {
+      "placeholder": "Search products...",
+      "noResults": "No products found",
+      "tryOther": "Try browsing other categories or add some products!"
+    }
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": {
+      "title": "Your Cart is Empty",
+      "subtitle": "Start shopping to add items to your cart and earn miles!",
+      "continueShopping": "Continue Shopping"
+    },
+    "summary": {
+      "title": "Order Summary",
+      "subtotal": "Subtotal ({{count}} items)",
+      "discount": "Discount ({{percent}}%)",
+      "milesEarned": "Miles Earned",
+      "total": "Total",
+      "checkout": "Checkout",
+      "milesInfo": "Miles will be added to your account after checkout"
+    },
+    "itemsInCart": "{{count}} item in your cart",
+    "itemsInCart_plural": "{{count}} items in your cart"
+  },
+  "account": {
+    "title": "Account Dashboard",
+    "welcome": "Welcome back, {{name}}!",
+    "stats": {
+      "currentMiles": "Current Miles",
+      "totalOrders": "Total Orders",
+      "totalSpent": "Total Spent",
+      "milesEarned": "Miles Earned"
+    },
+    "bonusRewards": {
+      "title": "Bonus Rewards",
+      "redeem": "Redeem Bonus",
+      "cost": "Cost: {{miles}} miles",
+      "noRewards": "No bonus rewards available at the moment",
+      "earnMore": "Earn {{miles}} more miles to unlock bonus rewards"
+    },
+    "orderHistory": {
+      "title": "Order History",
+      "orderId": "Order #{{id}}",
+      "noOrders": "No orders yet. Start shopping to see your order history!"
+    }
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "subtitle": "Manage products, orders, and analytics",
+    "login": {
+      "title": "Admin Access",
+      "subtitle": "Enter your admin password to continue",
+      "password": "Password",
+      "placeholder": "Enter admin password",
+      "submit": "Access Admin Panel",
+      "authenticating": "Authenticating...",
+      "demoPassword": "Demo Password: admin123"
+    },
+    "stats": {
+      "totalSales": "Total Sales",
+      "totalOrders": "Total Orders",
+      "milesIssued": "Miles Issued",
+      "totalProducts": "Total Products"
+    },
+    "bestSelling": {
+      "title": "Best Selling Product",
+      "unitsSold": "{{count}} units sold"
+    },
+    "products": {
+      "addProduct": "Add Product",
+      "allProducts": "All Products",
+      "categoryProducts": "{{category}} Products",
+      "avgRating": "Avg. Rating: {{rating}}",
+      "totalValue": "Total Value: ${{value}}"
+    },
+    "logout": "Logout"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions about Toonga? We're here to help! Reach out to our support team.",
+    "methods": {
+      "email": {
+        "title": "Email Support",
+        "description": "Get help via email",
+        "contact": "support@toonga.com",
+        "available": "24/7"
+      },
+      "phone": {
+        "title": "Phone Support",
+        "description": "Speak with our team",
+        "contact": "+1 (555) 123-4567",
+        "available": "Mon-Fri 9AM-6PM EST"
+      },
+      "chat": {
+        "title": "Live Chat",
+        "description": "Chat with us instantly",
+        "contact": "Available on website",
+        "available": "Mon-Fri 9AM-6PM EST"
+      },
+      "premium": {
+        "title": "Premium Support",
+        "description": "Priority assistance",
+        "contact": "For VIP members",
+        "available": "24/7"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "category": "Category",
+      "categories": {
+        "general": "General Inquiry",
+        "support": "Technical Support",
+        "billing": "Billing & Payments",
+        "partnership": "Partnership",
+        "feedback": "Feedback"
+      },
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief description of your inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Please provide details about your inquiry...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "subtitle": "Thank you for contacting us. We'll get back to you within 24 hours."
+      }
+    },
+    "offices": {
+      "title": "Our Offices"
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "monday": "Monday - Friday",
+      "mondayHours": "9:00 AM - 6:00 PM EST",
+      "saturday": "Saturday",
+      "saturdayHours": "10:00 AM - 4:00 PM EST",
+      "sunday": "Sunday",
+      "sundayHours": "Closed"
+    }
+  },
+  "register": {
+    "title": "Create Account",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Create a password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "submit": "Create Account",
+    "creating": "Creating Account...",
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Email is invalid",
+      "passwordRequired": "Password is required",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "passwordMismatch": "Passwords do not match",
+      "emailExists": "Email already exists"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {{name}}!",
+    "quickActions": "Quick Actions",
+    "recentOrders": "Recent Orders",
+    "viewAllOrders": "View all orders →",
+    "actions": {
+      "shoppingCart": "Shopping Cart",
+      "cartItems": "{{count}} items in cart",
+      "accountDetails": "Account Details",
+      "viewOrderHistory": "View full order history",
+      "adminPanel": "Admin Panel",
+      "manageProducts": "Manage products & orders"
+    }
+  },
+  "notifications": {
+    "welcome": "Welcome {{name}}! Your account has been created successfully.",
+    "emailExists": "Email already exists",
+    "adminLoginSuccess": "Admin login successful",
+    "adminLoginError": "Invalid admin password",
+    "adminLogout": "Admin logged out successfully",
+    "productAdded": "Product \"{{name}}\" added successfully",
+    "productUpdated": "Product updated successfully",
+    "productDeleted": "Product \"{{name}}\" deleted successfully",
+    "productNotAvailable": "Product is not available for purchase",
+    "purchased": "🎉 Purchased {{name}} and earned {{miles}} miles!",
+    "purchasedDescription": "Total spent: ${{amount}}",
+    "productNotAvailableCart": "Product is not available",
+    "addedToCart": "Added {{name}} to cart",
+    "addedToCartDescription": "{{count}} item added",
+    "addedToCartDescription_plural": "{{count}} items added",
+    "updatedCartQuantity": "Updated {{name}} quantity in cart",
+    "removedFromCart": "Removed {{name}} from cart",
+    "updatedQuantity": "Updated {{name}} quantity to {{quantity}}",
+    "cartCleared": "Cart cleared",
+    "cartEmpty": "Your cart is empty",
+    "orderSuccess": "🎉 Order placed successfully!",
+    "orderSuccessDescription": "Order #{{orderId}} • Earned {{miles}} miles",
+    "notEnoughMiles": "Not enough miles to redeem this bonus",
+    "activeDiscountExists": "You already have an active discount",
+    "bonusRedeemed": "🎁 Redeemed {{name}}!",
+    "bonusRedeemedDescription": "Used {{miles}} miles • {{discount}}% discount applied",
+    "discountCleared": "Discount cleared",
+    "milesAdded": "+{{miles}} miles added to your account!",
+    "messageSent": "Message sent successfully!",
+    "messageSentDescription": "We'll get back to you within 24 hours."
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

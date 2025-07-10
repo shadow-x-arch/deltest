@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": "Toonga",
+    "tagline": "智能购物，赚取里程",
+    "register": "注册",
+    "login": "登录",
+    "admin": "管理员",
+    "dashboard": "仪表板",
+    "contact": "联系",
+    "cart": "购物车",
+    "categories": {
+      "flights": "航班",
+      "electronics": "电子产品",
+      "hotels": "酒店",
+      "cars": "汽车",
+      "furniture": "家具",
+      "beverage": "饮料"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

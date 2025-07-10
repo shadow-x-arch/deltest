@@ -1,0 +1,83 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "add": "Ajouter",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "header": {
+    "brand": "Toonga",
+    "tagline": "Achetez Malin, Gagnez des Miles",
+    "register": "S'inscrire",
+    "login": "Connexion",
+    "admin": "Administrateur",
+    "dashboard": "Tableau de Bord",
+    "contact": "Contact",
+    "cart": "Panier",
+    "categories": {
+      "flights": "Vols",
+      "electronics": "Électronique",
+      "hotels": "Hôtels",
+      "cars": "Voitures",
+      "furniture": "Meubles",
+      "beverage": "Boissons"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Achetez Malin, Gagnez des Miles",
+      "subtitle": "Découvrez des produits incroyables dans plusieurs catégories et gagnez des miles précieux à chaque achat. Échangez vos miles contre des remises exclusives et des récompenses.",
+      "startShopping": "Commencer les Achats",
+      "milesAvailable": "Miles Disponibles"
+    },
+    "stats": {
+      "productsAvailable": "Produits Disponibles",
+      "ordersCompleted": "Commandes Terminées",
+      "averageRating": "Note Moyenne"
+    },
+    "categories": {
+      "title": "Acheter par Catégorie",
+      "subtitle": "Explorez notre collection diversifiée de produits dans différentes catégories",
+      "descriptions": {
+        "flights": "Réservez des vols et gagnez des miles de voyage",
+        "electronics": "Les derniers gadgets et technologies",
+        "hotels": "Séjours de luxe dans le monde entier",
+        "cars": "Véhicules premium et locations",
+        "furniture": "Mobilier moderne pour la maison",
+        "beverage": "Boissons premium et plus"
+      }
+    },
+    "featured": {
+      "title": "Produits en Vedette",
+      "subtitle": "Découvrez certains de nos produits les plus populaires de diverses catégories",
+      "viewAll": "Voir Tous les Produits"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

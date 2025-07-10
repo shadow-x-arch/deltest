@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   ShoppingBag, 
   Award, 
@@ -30,6 +31,7 @@ const categories = [
 ];
 
 export const HomePage: React.FC = () => {
+  const { t } = useTranslation();
   const { products, user } = useStore();
   const { isDarkMode } = useTheme();
   const [selectedProduct, setSelectedProduct] = React.useState<Product | null>(null);
@@ -60,11 +62,10 @@ export const HomePage: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Shop Smart, Earn Miles
+                {t('home.hero.title')}
               </h1>
               <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Discover amazing products across multiple categories and earn valuable miles with every purchase. 
-                Redeem your miles for exclusive discounts and rewards.
+                {t('home.hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -72,11 +73,11 @@ export const HomePage: React.FC = () => {
                   className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   <ShoppingBag className="w-5 h-5" />
-                  Start Shopping
+                  {t('home.hero.startShopping')}
                 </Link>
                 <div className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-white/20 rounded-lg text-white">
                   <Award className="w-5 h-5" />
-                  <span className="font-semibold">{user.miles.toLocaleString()} Miles Available</span>
+                  <span className="font-semibold">{user.miles.toLocaleString()} {t('home.hero.milesAvailable')}</span>
                 </div>
               </div>
             </motion.div>
@@ -107,7 +108,7 @@ export const HomePage: React.FC = () => {
                 <p className={`${
                   isDarkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  Products Available
+                  {t('home.stats.productsAvailable')}
                 </p>
               </motion.div>
 
@@ -131,7 +132,7 @@ export const HomePage: React.FC = () => {
                 <p className={`${
                   isDarkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  Orders Completed
+                  {t('home.stats.ordersCompleted')}
                 </p>
               </motion.div>
 
@@ -155,7 +156,7 @@ export const HomePage: React.FC = () => {
                 <p className={`${
                   isDarkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}>
-                  Average Rating
+                  {t('home.stats.averageRating')}
                 </p>
               </motion.div>
             </div>
@@ -175,12 +176,12 @@ export const HomePage: React.FC = () => {
               <h2 className={`text-3xl font-bold mb-4 ${
                 isDarkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                Shop by Category
+                {t('home.categories.title')}
               </h2>
               <p className={`text-lg max-w-2xl mx-auto ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                Explore our diverse collection of products across different categories
+                {t('home.categories.subtitle')}
               </p>
             </motion.div>
 
@@ -211,12 +212,12 @@ export const HomePage: React.FC = () => {
                           <h3 className={`text-lg font-semibold mb-1 ${
                             isDarkMode ? 'text-white' : 'text-gray-900'
                           }`}>
-                            {category.name}
+                            {t(`header.categories.${category.name.toLowerCase()}`)}
                           </h3>
                           <p className={`text-sm ${
                             isDarkMode ? 'text-gray-400' : 'text-gray-600'
                           }`}>
-                            {category.description}
+                            {t(`home.categories.descriptions.${category.name.toLowerCase()}`)}
                           </p>
                         </div>
                         <ArrowRight className={`w-5 h-5 transition-transform group-hover:translate-x-1 ${
@@ -244,12 +245,12 @@ export const HomePage: React.FC = () => {
               <h2 className={`text-3xl font-bold mb-4 ${
                 isDarkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                Featured Products
+                {t('home.featured.title')}
               </h2>
               <p className={`text-lg max-w-2xl mx-auto ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                Discover some of our most popular products from various categories
+                {t('home.featured.subtitle')}
               </p>
             </motion.div>
 
@@ -319,7 +320,7 @@ export const HomePage: React.FC = () => {
                 to="/electronics"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                View All Products
+                {t('home.featured.viewAll')}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": "Toonga",
+    "tagline": "스마트 쇼핑, 마일리지 적립",
+    "register": "회원가입",
+    "login": "로그인",
+    "admin": "관리자",
+    "dashboard": "대시보드",
+    "contact": "연락처",
+    "cart": "장바구니",
+    "categories": {
+      "flights": "항공편",
+      "electronics": "전자제품",
+      "hotels": "호텔",
+      "cars": "자동차",
+      "furniture": "가구",
+      "beverage": "음료"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

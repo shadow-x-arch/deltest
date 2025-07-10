@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   ShoppingBag,
   Shield,
@@ -33,6 +34,7 @@ const categories = [
 ];
 
 export const Header: React.FC = () => {
+  const { t } = useTranslation();
   const { isAdminAuthenticated } = useStore();
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
@@ -60,7 +62,7 @@ export const Header: React.FC = () => {
               <span className={`text-xl font-bold ${
                 isDarkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                Toonga
+                {t('header.brand')}
               </span>
             </Link>
 
@@ -82,7 +84,7 @@ export const Header: React.FC = () => {
                     }`}
                   >
                     <Icon className="w-4 h-4" />
-                    <span className="text-sm font-medium">{category.name}</span>
+                    <span className="text-sm font-medium">{t(`header.categories.${category.name.toLowerCase()}`)}</span>
                   </Link>
                 );
               })}
@@ -104,7 +106,7 @@ export const Header: React.FC = () => {
                 }`}
               >
                 <UserPlus className="w-4 h-4" />
-                <span className="text-sm font-medium hidden sm:block">Register</span>
+                <span className="text-sm font-medium hidden sm:block">{t('header.register')}</span>
               </button>
 
               {/* Admin Login Button */}
@@ -120,7 +122,7 @@ export const Header: React.FC = () => {
               >
                 <Shield className="w-4 h-4" />
                 <span className="text-sm font-medium">
-                  {isAdminAuthenticated ? 'Admin' : 'Login'}
+                  {isAdminAuthenticated ? t('header.admin') : t('header.login')}
                 </span>
               </Link>
 
@@ -202,7 +204,7 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       <Icon className="w-4 h-4" />
-                      <span className="text-sm font-medium">{category.name}</span>
+                      <span className="text-sm font-medium">{t(`header.categories.${category.name.toLowerCase()}`)}</span>
                     </Link>
                   );
                 })}
@@ -213,7 +215,7 @@ export const Header: React.FC = () => {
                 className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <User className="w-4 h-4" />
-                Dashboard
+                {t('header.dashboard')}
               </Link>
             </motion.div>
           )}

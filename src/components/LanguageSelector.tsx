@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown } from 'lucide-react';
-import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
 
 const languages = [
@@ -18,14 +18,14 @@ const languages = [
 ];
 
 export const LanguageSelector: React.FC = () => {
-  const { language, setLanguage } = useStore();
+  const { i18n, t } = useTranslation();
   const { isDarkMode } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
-  const currentLanguage = languages.find(lang => lang.code === language) || languages[0];
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const handleLanguageChange = (langCode: string) => {
-    setLanguage(langCode);
+    i18n.changeLanguage(langCode);
     setIsOpen(false);
   };
 
@@ -41,7 +41,7 @@ export const LanguageSelector: React.FC = () => {
       >
         <Globe className="w-4 h-4" />
         <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="text-sm font-medium hidden sm:block">{currentLanguage.name}</span>
+        <span className="text-sm font-medium hidden sm:block">{t(`languages.${currentLanguage.code}`)}</span>
         <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
@@ -67,7 +67,7 @@ export const LanguageSelector: React.FC = () => {
                   key={lang.code}
                   onClick={() => handleLanguageChange(lang.code)}
                   className={`w-full flex items-center gap-3 px-4 py-2 text-left transition-colors ${
-                    lang.code === language
+                    lang.code === i18n.language
                       ? isDarkMode
                         ? 'bg-blue-900/20 text-blue-400'
                         : 'bg-blue-50 text-blue-600'
@@ -77,7 +77,7 @@ export const LanguageSelector: React.FC = () => {
                   }`}
                 >
                   <span className="text-lg">{lang.flag}</span>
-                  <span className="font-medium">{lang.name}</span>
+                  <span className="font-medium">{t(`languages.${lang.code}`)}</span>
                 </button>
               ))}
             </div>

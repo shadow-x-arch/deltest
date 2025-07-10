@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": "Toonga",
+    "tagline": "Compre Inteligente, Ganhe Milhas",
+    "register": "Registrar",
+    "login": "Entrar",
+    "admin": "Administrador",
+    "dashboard": "Painel",
+    "contact": "Contato",
+    "cart": "Carrinho",
+    "categories": {
+      "flights": "Voos",
+      "electronics": "Eletrônicos",
+      "hotels": "Hotéis",
+      "cars": "Carros",
+      "furniture": "Móveis",
+      "beverage": "Bebidas"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

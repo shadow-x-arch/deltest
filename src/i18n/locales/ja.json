@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": "Toonga",
+    "tagline": "スマートショッピング、マイルを獲得",
+    "register": "登録",
+    "login": "ログイン",
+    "admin": "管理者",
+    "dashboard": "ダッシュボード",
+    "contact": "お問い合わせ",
+    "cart": "カート",
+    "categories": {
+      "flights": "フライト",
+      "electronics": "電子機器",
+      "hotels": "ホテル",
+      "cars": "車",
+      "furniture": "家具",
+      "beverage": "飲料"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

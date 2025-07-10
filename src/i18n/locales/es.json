@@ -1,0 +1,142 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Agregar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "confirm": "Confirmar",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "header": {
+    "brand": "Toonga",
+    "tagline": "Compra Inteligente, Gana Millas",
+    "register": "Registrarse",
+    "login": "Iniciar Sesión",
+    "admin": "Administrador",
+    "dashboard": "Panel",
+    "contact": "Contacto",
+    "cart": "Carrito",
+    "categories": {
+      "flights": "Vuelos",
+      "electronics": "Electrónicos",
+      "hotels": "Hoteles",
+      "cars": "Autos",
+      "furniture": "Muebles",
+      "beverage": "Bebidas"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Compra Inteligente, Gana Millas",
+      "subtitle": "Descubre productos increíbles en múltiples categorías y gana millas valiosas con cada compra. Canjea tus millas por descuentos exclusivos y recompensas.",
+      "startShopping": "Comenzar a Comprar",
+      "milesAvailable": "Millas Disponibles"
+    },
+    "stats": {
+      "productsAvailable": "Productos Disponibles",
+      "ordersCompleted": "Pedidos Completados",
+      "averageRating": "Calificación Promedio"
+    },
+    "categories": {
+      "title": "Comprar por Categoría",
+      "subtitle": "Explora nuestra diversa colección de productos en diferentes categorías",
+      "descriptions": {
+        "flights": "Reserva vuelos y gana millas de viaje",
+        "electronics": "Los últimos gadgets y tecnología",
+        "hotels": "Estadías de lujo en todo el mundo",
+        "cars": "Vehículos premium y alquileres",
+        "furniture": "Mobiliario moderno para el hogar",
+        "beverage": "Bebidas premium y más"
+      }
+    },
+    "featured": {
+      "title": "Productos Destacados",
+      "subtitle": "Descubre algunos de nuestros productos más populares de varias categorías",
+      "viewAll": "Ver Todos los Productos"
+    }
+  },
+  "products": {
+    "status": {
+      "available": "Disponible",
+      "limited": "Limitado",
+      "outOfStock": "Agotado"
+    },
+    "actions": {
+      "addToCart": "Agregar al Carrito",
+      "buyNow": "Comprar Ahora",
+      "viewDetails": "Ver Detalles"
+    },
+    "details": {
+      "description": "Descripción",
+      "milesReward": "Recompensa de Millas",
+      "popularity": "Popularidad",
+      "bestSeller": "Más Vendido",
+      "popular": "Popular",
+      "new": "Nuevo",
+      "didYouKnow": "💡 ¿Sabías que?",
+      "milesEarnInfo": "¡Ganarás {{miles}} millas con esta compra, acercándote a recompensas y descuentos exclusivos!"
+    },
+    "filters": {
+      "allStatus": "Todos los Estados",
+      "allPrices": "Todos los Precios",
+      "under100": "Menos de $100",
+      "100to1000": "$100 - $1,000",
+      "over1000": "Más de $1,000",
+      "sortBy": "Ordenar por:",
+      "name": "Nombre",
+      "price": "Precio",
+      "rating": "Calificación",
+      "miles": "Millas"
+    },
+    "search": {
+      "placeholder": "Buscar productos...",
+      "noResults": "No se encontraron productos",
+      "tryOther": "¡Prueba navegando otras categorías o agrega algunos productos!"
+    }
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": {
+      "title": "Tu Carrito Está Vacío",
+      "subtitle": "¡Comienza a comprar para agregar artículos a tu carrito y ganar millas!",
+      "continueShopping": "Continuar Comprando"
+    },
+    "summary": {
+      "title": "Resumen del Pedido",
+      "subtotal": "Subtotal ({{count}} artículo)",
+      "subtotal_plural": "Subtotal ({{count}} artículos)",
+      "discount": "Descuento ({{percent}}%)",
+      "milesEarned": "Millas Ganadas",
+      "total": "Total",
+      "checkout": "Finalizar Compra",
+      "milesInfo": "Las millas se agregarán a tu cuenta después del pago"
+    },
+    "itemsInCart": "{{count}} artículo en tu carrito",
+    "itemsInCart_plural": "{{count}} artículos en tu carrito"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}

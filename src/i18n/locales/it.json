@@ -1,0 +1,32 @@
+{
+  "header": {
+    "brand": "Toonga",
+    "tagline": "Acquista Intelligente, Guadagna Miglia",
+    "register": "Registrati",
+    "login": "Accedi",
+    "admin": "Amministratore",
+    "dashboard": "Dashboard",
+    "contact": "Contatto",
+    "cart": "Carrello",
+    "categories": {
+      "flights": "Voli",
+      "electronics": "Elettronica",
+      "hotels": "Hotel",
+      "cars": "Auto",
+      "furniture": "Mobili",
+      "beverage": "Bevande"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ar": "العربية"
+  }
+}
