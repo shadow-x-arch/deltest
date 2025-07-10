@@ -194,7 +194,7 @@ export const ProductTable: React.FC<ProductTableProps> = ({
         return 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400';
       case 'Cars':
         return 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400';
-      case 'Furniture':
+      case 'House & Furniture':
         return 'bg-amber-100 text-amber-800 dark:bg-amber-900/20 dark:text-amber-400';
       case 'Beverage':
         return 'bg-pink-100 text-pink-800 dark:bg-pink-900/20 dark:text-pink-400';

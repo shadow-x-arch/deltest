@@ -266,7 +266,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
                 <option value="Travel">Travel</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Cars">Cars</option>
-                <option value="Furniture">Furniture</option>
+                <option value="House & Furniture">House & Furniture</option>
                 <option value="Beverage">Beverage</option>
               </select>
             </div>

@@ -25,7 +25,7 @@ const categories = [
   { name: 'Travel', path: '/travel', icon: Plane, color: 'from-blue-500 to-blue-600', description: 'Book flights & hotels, earn travel miles' },
   { name: 'Electronics', path: '/electronics', icon: Smartphone, color: 'from-purple-500 to-purple-600', description: 'Latest gadgets and tech' },
   { name: 'Cars', path: '/cars', icon: Car, color: 'from-red-500 to-red-600', description: 'Premium vehicles and rentals' },
-  { name: 'Furniture', path: '/furniture', icon: Sofa, color: 'from-amber-500 to-amber-600', description: 'Modern home furnishing' },
+  { name: 'House & Furniture', path: '/house-furniture', icon: Sofa, color: 'from-amber-500 to-amber-600', description: 'Homes and premium furniture' },
   { name: 'Beverage', path: '/beverage', icon: Coffee, color: 'from-pink-500 to-pink-600', description: 'Premium drinks and more' },
 ];
 
@@ -211,12 +211,12 @@ export const HomePage: React.FC = () => {
                           <h3 className={`text-lg font-semibold mb-1 ${
                             isDarkMode ? 'text-white' : 'text-gray-900'
                           }`}>
-                            {t(`header.categories.${category.name.toLowerCase()}`)}
+                            {t(`header.categories.${category.name.toLowerCase().replace(' & ', '')}`)}
                           </h3>
                           <p className={`text-sm ${
                             isDarkMode ? 'text-gray-400' : 'text-gray-600'
                           }`}>
-                            {t(`home.categories.descriptions.${category.name.toLowerCase()}`)}
+                            {t(`home.categories.descriptions.${category.name.toLowerCase().replace(' & ', '')}`)}
                           </p>
                         </div>
                         <ArrowRight className={`w-5 h-5 transition-transform group-hover:translate-x-1 ${

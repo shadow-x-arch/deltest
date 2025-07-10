@@ -28,7 +28,7 @@ const categories = [
   { name: 'Travel', value: 'Travel' as const, icon: Plane, color: 'from-blue-500 to-blue-600' },
   { name: 'Electronics', value: 'Electronics' as const, icon: Smartphone, color: 'from-purple-500 to-purple-600' },
   { name: 'Cars', value: 'Cars' as const, icon: Car, color: 'from-red-500 to-red-600' },
-  { name: 'Furniture', value: 'Furniture' as const, icon: Sofa, color: 'from-amber-500 to-amber-600' },
+  { name: 'House & Furniture', value: 'House & Furniture' as const, icon: Sofa, color: 'from-amber-500 to-amber-600' },
   { name: 'Beverage', value: 'Beverage' as const, icon: Coffee, color: 'from-pink-500 to-pink-600' },
 ];
 
