@@ -24,7 +24,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
     text: '',
     orders: '0',
     types: '',
-    category: 'Electronics' as Product['category']
+    category: 'House',
+    subcategory: ''
   });
 
   // Update form data when editing product changes
@@ -39,7 +40,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
         text: editingProduct.text,
         orders: editingProduct.orders.toString(),
         types: editingProduct.types,
-        category: editingProduct.category
+        category: editingProduct.category,
+        subcategory: editingProduct.subcategory || ''
       });
     } else {
       setFormData({
@@ -51,7 +53,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
         text: '',
         orders: '0',
         types: '',
-        category: 'Electronics'
+        category: 'House',
+        subcategory: ''
       });
     }
   }, [editingProduct]);
@@ -68,7 +71,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
       text: formData.text,
       orders: parseInt(formData.orders),
       types: formData.types,
-      category: formData.category
+      category: formData.category,
+      subcategory: formData.subcategory || undefined
     };
 
     if (editingProduct) {
@@ -86,15 +90,19 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
       text: '',
       orders: '0',
       types: '',
-      category: 'House'
+     category: 'House',
+     subcategory: ''
     });
     onClose();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [name]: value,
+      // Reset subcategory when category changes
+      ...(name === 'category' ? { subcategory: '' } : {})
     }));
   };
 

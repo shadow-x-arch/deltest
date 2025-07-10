@@ -9,7 +9,7 @@ export interface Product {
   orders: number;
   types: string;
   category: 'House' | 'Cars' | 'Travel' | 'Electronics' | 'Beverage';
-  subcategory?: 'Furniture' | 'Appliance' | 'Rent' | 'Sale' | 'Airline Tickets' | 'Hotels' | 'Apartments' | 'Devices' | 'Add-ons' | 'Alcohol' | 'Non-Alcohol';
+  subcategory?: 'Furniture' | 'Appliance' | 'Rent' | 'Sale' | 'Airline Tickets' | 'Hotels' | 'Devices' | 'Add-ons' | 'Alcohol' | 'Non-Alcohol';
   image?: string;
 }
 

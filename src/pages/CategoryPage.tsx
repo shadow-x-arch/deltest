@@ -309,20 +309,41 @@ export const CategoryPage: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-8"
               >
-                <div className={`p-8 rounded-xl border ${categoryColors.bg} ${categoryColors.border} relative overflow-hidden ${
-                  categoryName === 'Flights' ? 'min-h-[300px]' : ''
-                }`}>
+                <div className={`p-8 rounded-xl border ${categoryColors.bg} ${categoryColors.border} relative overflow-hidden`}>
                   <div className="relative z-10">
                     <h1 className={`text-4xl font-bold mb-4 ${categoryColors.text}`}>
-                      {categoryInfo.title}
+                      {getCategoryInfo(categoryName).title}
                     </h1>
                     <p className={`text-lg mb-6 ${categoryColors.text} opacity-90`}>
-                      {categoryInfo.description}
+                      {getCategoryInfo(categoryName).description}
                     </p>
+                    
+                    {/* Subcategory Navigation */}
+                    {getCategoryInfo(categoryName).subcategories.length > 0 && (
+                      <div className="flex flex-wrap gap-3 mb-6">
+                        {getCategoryInfo(categoryName).subcategories.map((subcategory) => (
+                          <button
+                            key={subcategory.name}
+                            onClick={() => {
+                              // Filter by subcategory logic can be added here
+                              console.log(`Filter by ${subcategory.name}`);
+                            }}
+                            className={`px-4 py-2 rounded-lg border transition-all ${
+                              isDarkMode
+                                ? 'bg-white/10 border-white/20 text-white hover:bg-white/20'
+                                : 'bg-white/50 border-white/30 text-gray-800 hover:bg-white/70'
+                            }`}
+                          >
+                            <span className="font-medium">{subcategory.name}</span>
+                            <span className="block text-xs opacity-75">{subcategory.description}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
                     
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                      {categoryInfo.features.map((feature, index) => (
+                      {getCategoryInfo(categoryName).features.map((feature, index) => (
                         <div key={index} className={`flex items-center gap-2 ${categoryColors.text} opacity-80`}>
                           <div className={`w-2 h-2 rounded-full ${categoryColors.text.replace('text-', 'bg-')} opacity-60`} />
                           <span className="text-sm font-medium">{feature}</span>
@@ -337,9 +358,9 @@ export const CategoryPage: React.FC = () => {
                   
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-64 h-64 opacity-20">
-                    {categoryName === 'Flights' ? (
+                    {categoryName === 'Travel' ? (
                       <div className="w-full h-full">
-                        {/* Subtle cloud-like shapes for flights */}
+                        {/* Subtle cloud-like shapes for travel */}
                         <div className="absolute top-8 right-8 w-32 h-16 bg-white/30 rounded-full blur-sm" />
                         <div className="absolute top-16 right-16 w-24 h-12 bg-white/20 rounded-full blur-sm" />
                         <div className="absolute top-24 right-4 w-20 h-10 bg-white/25 rounded-full blur-sm" />
