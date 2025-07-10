@@ -270,10 +270,10 @@ export const useStore = create<StoreState>()(
           cart: [],
           activeDiscount: 0
         }));
-      },
         toast.success('🎉 Order placed successfully!', {
           description: `Order #${newOrder.id.slice(-8)} • Earned ${finalMiles} miles`
         });
+      },
 
       redeemBonus: (bonusId) => {
         const state = get();
