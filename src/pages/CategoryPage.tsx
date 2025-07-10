@@ -5,6 +5,7 @@ import { Filter, SortAsc, SortDesc } from 'lucide-react';
 import { ProductCard } from '../components/ProductCard';
 import { RewardsPanel } from '../components/RewardsPanel';
 import { ProductDetailModal } from '../components/ProductDetailModal';
+import { SearchBar } from '../components/SearchBar';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
 import { Product } from '../types';
@@ -82,6 +83,7 @@ export const CategoryPage: React.FC = () => {
   const [priceRange, setPriceRange] = React.useState<'all' | 'low' | 'mid' | 'high'>('all');
   const [selectedProduct, setSelectedProduct] = React.useState<Product | null>(null);
   const [showProductModal, setShowProductModal] = React.useState(false);
+  const [searchQuery, setSearchQuery] = React.useState('');
 
   const categoryName = categoryMapping[location.pathname];
   const categoryColors = getCategoryColors(categoryName);
@@ -92,6 +94,16 @@ export const CategoryPage: React.FC = () => {
   
   const filteredProducts = useMemo(() => {
     let filtered = products.filter(product => product.category === categoryName);
+
+    // Apply search filter
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(product =>
+        product.name.toLowerCase().includes(query) ||
+        product.text.toLowerCase().includes(query) ||
+        product.types.toLowerCase().includes(query)
+      );
+    }
 
     // Apply status filter
     if (filterBy !== 'all') {
@@ -136,7 +148,7 @@ export const CategoryPage: React.FC = () => {
     });
 
     return filtered;
-  }, [products, categoryName, sortBy, sortOrder, filterBy, priceRange]);
+  }, [products, categoryName, sortBy, sortOrder, filterBy, priceRange, searchQuery]);
 
   const categoryDisplayName = categoryName.toLowerCase();
 
@@ -238,6 +250,19 @@ export const CategoryPage: React.FC = () => {
                     <div className={`w-full h-full rounded-full ${categoryColors.text.replace('text-', 'bg-')} transform translate-x-32 -translate-y-32`} />
                   </div>
                 </div>
+              </motion.div>
+
+              {/* Search Bar */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="mb-6"
+              >
+                <SearchBar
+                  onSearch={setSearchQuery}
+                  placeholder={`Search ${categoryName.toLowerCase()}...`}
+                />
               </motion.div>
 
               {/* Filters and Sorting */}

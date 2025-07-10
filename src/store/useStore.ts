@@ -6,11 +6,14 @@ import { demoProducts, bonusRewards } from '../data/demoData';
 interface StoreState {
   products: Product[];
   user: User;
+  language: string;
   isAdminAuthenticated: boolean;
   bonuses: Bonus[];
   cart: CartItem[];
   orders: Order[];
   activeDiscount: number;
+  setLanguage: (language: string) => void;
+  registerUser: (userData: { name: string; email: string; password: string }) => boolean;
   adminLogin: (password: string) => boolean;
   adminLogout: () => void;
   addProduct: (product: Omit<Product, 'id'>) => void;
@@ -37,12 +40,29 @@ export const useStore = create<StoreState>()(
         name: 'John Doe',
         miles: 1250
       },
+      language: 'en',
       isAdminAuthenticated: false,
       bonuses: bonusRewards,
       cart: [],
       orders: [],
       activeDiscount: 0,
       
+      setLanguage: (language) => {
+        set({ language });
+      },
+
+      registerUser: (userData) => {
+        // Simple registration - in production, use proper authentication
+        // Check if email already exists (mock check)
+        if (userData.email === 'existing@example.com') {
+          return false;
+        }
+        
+        // In a real app, you would send this to your backend
+        console.log('User registered:', userData);
+        return true;
+      },
+
       adminLogin: (password) => {
         // Simple password check - in production, use proper authentication
         if (password === 'admin123') {
@@ -258,6 +278,7 @@ export const useStore = create<StoreState>()(
       partialize: (state) => ({
         products: state.products,
         user: state.user,
+        language: state.language,
         isAdminAuthenticated: state.isAdminAuthenticated,
         cart: state.cart,
         orders: state.orders,

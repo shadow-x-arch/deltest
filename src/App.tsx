@@ -7,6 +7,7 @@ import { CartPage } from './pages/CartPage';
 import { AccountPage } from './pages/AccountPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { AdminPage } from './pages/AdminPage';
+import { ContactPage } from './pages/ContactPage';
 import { useTheme } from './hooks/useTheme';
 function App() {
   const { isDarkMode } = useTheme();
@@ -38,6 +39,7 @@ function App() {
             <Route path="/account" element={<AccountPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

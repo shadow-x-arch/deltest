@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   ShoppingBag,
   Shield,
+  UserPlus,
   Moon, 
   Sun, 
   Menu, 
@@ -15,9 +16,12 @@ import {
   Sofa,
   Coffee,
   User
+  MessageCircle
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
+import { LanguageSelector } from './LanguageSelector';
+import { RegisterModal } from './RegisterModal';
 
 const categories = [
   { name: 'Flights', path: '/flights', icon: Plane },
@@ -33,10 +37,11 @@ export const Header: React.FC = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
 
 
   return (
-    <div>
+    <>
       <header className={`sticky top-0 z-40 border-b transition-colors ${
         isDarkMode
           ? 'bg-gray-900/95 backdrop-blur-sm border-gray-700'
@@ -55,7 +60,7 @@ export const Header: React.FC = () => {
               <span className={`text-xl font-bold ${
                 isDarkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                MilesShop
+                Toonga
               </span>
             </Link>
 
@@ -86,6 +91,22 @@ export const Header: React.FC = () => {
             {/* Right Side Actions */}
             <div className="flex items-center gap-4">
 
+              {/* Language Selector */}
+              <LanguageSelector />
+
+              {/* Register Button */}
+              <button
+                onClick={() => setShowRegisterModal(true)}
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                  isDarkMode
+                    ? 'hover:bg-gray-800 text-gray-300'
+                    : 'hover:bg-gray-100 text-gray-600'
+                }`}
+              >
+                <UserPlus className="w-4 h-4" />
+                <span className="text-sm font-medium hidden sm:block">Register</span>
+              </button>
+
               {/* Admin Login Button */}
               <Link
                 to="/admin"
@@ -113,6 +134,18 @@ export const Header: React.FC = () => {
                 }`}
               >
                 <User className="w-5 h-5" />
+              </Link>
+
+              {/* Contact Button */}
+              <Link
+                to="/contact"
+                className={`p-2 rounded-lg transition-colors ${
+                  isDarkMode
+                    ? 'hover:bg-gray-800 text-gray-300'
+                    : 'hover:bg-gray-100 text-gray-600'
+                }`}
+              >
+                <MessageCircle className="w-5 h-5" />
               </Link>
 
               {/* Theme Toggle */}
@@ -186,6 +219,15 @@ export const Header: React.FC = () => {
           )}
         </div>
       </header>
-    </div>
+      
+      <RegisterModal
+        isOpen={showRegisterModal}
+        onClose={() => setShowRegisterModal(false)}
+        onSuccess={() => {
+          // Handle successful registration
+          console.log('Registration successful!');
+        }}
+      />
+    </>
   );
 };
