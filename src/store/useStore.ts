@@ -38,7 +38,7 @@ export const useStore = create<StoreState>()(
       user: {
         id: 'user-1',
         name: 'John Doe',
-        miles: 1250
+        miles: 125000
       },
       isAdminAuthenticated: false,
       bonuses: bonusRewards,
@@ -118,6 +118,7 @@ export const useStore = create<StoreState>()(
         // Calculate final price with discount
         const discountAmount = (product.amount * state.activeDiscount) / 100;
         const finalPrice = product.amount - discountAmount;
+        const milesEarned = Math.floor(finalPrice / 1000); // 1 mile per 1000 RWF
 
         // Update product orders
         set((state) => ({
@@ -128,12 +129,12 @@ export const useStore = create<StoreState>()(
           ),
           user: {
             ...state.user,
-            miles: state.user.miles + product.miles
+            miles: state.user.miles + milesEarned
           },
           activeDiscount: 0 // Clear discount after use
         }));
         
-        toast.success(i18n.t('notifications.purchased', { name: product.name, miles: product.miles }), {
+        toast.success(i18n.t('notifications.purchased', { name: product.name, miles: milesEarned }), {
           description: i18n.t('notifications.purchasedDescription', { amount: finalPrice.toLocaleString() })
         });
       },
@@ -235,7 +236,7 @@ export const useStore = create<StoreState>()(
         const { totalAmount, totalMiles } = state.getCartTotal();
         const discountAmount = (totalAmount * state.activeDiscount) / 100;
         const finalAmount = totalAmount - discountAmount;
-        const finalMiles = Math.floor(totalMiles * (1 + state.activeDiscount / 100));
+        const finalMiles = Math.floor(finalAmount / 1000); // 1 mile per 1000 RWF spent
 
         const newOrder: Order = {
           id: `order-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -313,7 +314,7 @@ export const useStore = create<StoreState>()(
       getCartTotal: () => {
         const state = get();
         const totalAmount = state.cart.reduce((sum, item) => sum + item.total, 0);
-        const totalMiles = state.cart.reduce((sum, item) => sum + item.miles, 0);
+        const totalMiles = Math.floor(totalAmount / 1000); // 1 mile per 1000 RWF
         const totalItems = state.cart.reduce((sum, item) => sum + item.quantity, 0);
         return { totalAmount, totalMiles, totalItems };
       }
