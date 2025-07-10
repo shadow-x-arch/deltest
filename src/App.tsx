@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Toaster } from 'sonner';
 import { Header } from './components/Header';
 import { HomePage } from './pages/HomePage';
+import { TravelLandingPage } from './pages/TravelLandingPage';
+import { FlightsPage } from './pages/FlightsPage';
+import { HotelsPage } from './pages/HotelsPage';
 import { CategoryPage } from './pages/CategoryPage';
 import { CartPage } from './pages/CartPage';
 import { AccountPage } from './pages/AccountPage';
@@ -30,7 +33,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/travel" element={<CategoryPage />} />
+            <Route path="/travel" element={<TravelLandingPage />} />
+            <Route path="/travel/flights" element={<FlightsPage />} />
+            <Route path="/travel/hotels" element={<HotelsPage />} />
             <Route path="/electronics" element={<CategoryPage />} />
             <Route path="/cars" element={<CategoryPage />} />
             <Route path="/furniture" element={<CategoryPage />} />

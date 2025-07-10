@@ -13,6 +13,7 @@ export const demoProducts: Product[] = [
     orders: 340,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -26,6 +27,7 @@ export const demoProducts: Product[] = [
     orders: 189,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -39,6 +41,7 @@ export const demoProducts: Product[] = [
     orders: 267,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -52,6 +55,7 @@ export const demoProducts: Product[] = [
     orders: 203,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -65,6 +69,7 @@ export const demoProducts: Product[] = [
     orders: 145,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -78,6 +83,7 @@ export const demoProducts: Product[] = [
     orders: 298,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -91,6 +97,7 @@ export const demoProducts: Product[] = [
     orders: 234,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -104,6 +111,7 @@ export const demoProducts: Product[] = [
     orders: 176,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -117,6 +125,7 @@ export const demoProducts: Product[] = [
     orders: 167,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -130,6 +139,7 @@ export const demoProducts: Product[] = [
     orders: 189,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -143,6 +153,7 @@ export const demoProducts: Product[] = [
     orders: 123,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -156,6 +167,7 @@ export const demoProducts: Product[] = [
     orders: 98,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -169,6 +181,7 @@ export const demoProducts: Product[] = [
     orders: 215,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -182,6 +195,7 @@ export const demoProducts: Product[] = [
     orders: 267,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -195,6 +209,7 @@ export const demoProducts: Product[] = [
     orders: 145,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -208,6 +223,7 @@ export const demoProducts: Product[] = [
     orders: 189,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -221,6 +237,7 @@ export const demoProducts: Product[] = [
     orders: 134,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -234,6 +251,7 @@ export const demoProducts: Product[] = [
     orders: 167,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -247,6 +265,7 @@ export const demoProducts: Product[] = [
     orders: 223,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -260,6 +279,7 @@ export const demoProducts: Product[] = [
     orders: 178,
     types: 'International',
     category: 'Travel',
+    subcategory: 'Flights',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
@@ -537,6 +557,7 @@ export const demoProducts: Product[] = [
     orders: 1234,
     types: 'Luxury',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -550,6 +571,7 @@ export const demoProducts: Product[] = [
     orders: 456,
     types: 'Beach Resort',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -563,6 +585,7 @@ export const demoProducts: Product[] = [
     orders: 2345,
     types: 'Business',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -576,6 +599,7 @@ export const demoProducts: Product[] = [
     orders: 789,
     types: 'Mountain Lodge',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -589,6 +613,7 @@ export const demoProducts: Product[] = [
     orders: 3456,
     types: 'Casino',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -602,6 +627,7 @@ export const demoProducts: Product[] = [
     orders: 1123,
     types: 'Boutique',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -615,6 +641,7 @@ export const demoProducts: Product[] = [
     orders: 567,
     types: 'Wellness',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -628,6 +655,7 @@ export const demoProducts: Product[] = [
     orders: 1789,
     types: 'Historic',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -641,6 +669,7 @@ export const demoProducts: Product[] = [
     orders: 345,
     types: 'Luxury',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -654,6 +683,7 @@ export const demoProducts: Product[] = [
     orders: 1567,
     types: 'Beach',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -667,6 +697,7 @@ export const demoProducts: Product[] = [
     orders: 234,
     types: 'Villa',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -680,6 +711,7 @@ export const demoProducts: Product[] = [
     orders: 678,
     types: 'Traditional',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -693,6 +725,7 @@ export const demoProducts: Product[] = [
     orders: 890,
     types: 'Vineyard',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -706,6 +739,7 @@ export const demoProducts: Product[] = [
     orders: 456,
     types: 'Unique',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -719,6 +753,7 @@ export const demoProducts: Product[] = [
     orders: 1234,
     types: 'Beach Resort',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -732,6 +767,7 @@ export const demoProducts: Product[] = [
     orders: 345,
     types: 'Historic',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -745,6 +781,7 @@ export const demoProducts: Product[] = [
     orders: 1567,
     types: 'Traditional',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -758,6 +795,7 @@ export const demoProducts: Product[] = [
     orders: 789,
     types: 'Ski Resort',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -771,6 +809,7 @@ export const demoProducts: Product[] = [
     orders: 2345,
     types: 'Unique',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -784,6 +823,7 @@ export const demoProducts: Product[] = [
     orders: 567,
     types: 'Adventure',
     category: 'Travel',
+    subcategory: 'Hotels',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 

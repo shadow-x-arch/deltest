@@ -9,6 +9,7 @@ export interface Product {
   orders: number;
   types: string;
   category: 'Travel' | 'Electronics' | 'Cars' | 'Furniture' | 'Beverage';
+  subcategory?: 'Flights' | 'Hotels';
   image?: string;
 }
 
