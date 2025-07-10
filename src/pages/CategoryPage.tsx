@@ -23,10 +23,10 @@ const getCategoryColors = (category: Product['category']) => {
   switch (category) {
     case 'Flights':
       return {
-        gradient: 'from-blue-500 to-blue-600',
-        bg: 'bg-blue-50 dark:bg-blue-900/20',
-        text: 'text-blue-700 dark:text-blue-400',
-        border: 'border-blue-200 dark:border-blue-700'
+        gradient: 'from-slate-300 via-blue-100 to-white',
+        bg: 'bg-gradient-to-b from-slate-200 via-blue-50 to-white dark:from-slate-800 dark:via-blue-900/30 dark:to-gray-900',
+        text: 'text-slate-700 dark:text-slate-300',
+        border: 'border-slate-200 dark:border-slate-700'
       };
     case 'Electronics':
       return {
@@ -221,7 +221,9 @@ export const CategoryPage: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-8"
               >
-                <div className={`p-8 rounded-xl border ${categoryColors.bg} ${categoryColors.border} relative overflow-hidden`}>
+                <div className={`p-8 rounded-xl border ${categoryColors.bg} ${categoryColors.border} relative overflow-hidden ${
+                  categoryName === 'Flights' ? 'min-h-[300px]' : ''
+                }`}>
                   <div className="relative z-10">
                     <h1 className={`text-4xl font-bold mb-4 ${categoryColors.text}`}>
                       {categoryInfo.title}
@@ -246,8 +248,17 @@ export const CategoryPage: React.FC = () => {
                   </div>
                   
                   {/* Background Pattern */}
-                  <div className="absolute top-0 right-0 w-64 h-64 opacity-10">
-                    <div className={`w-full h-full rounded-full ${categoryColors.text.replace('text-', 'bg-')} transform translate-x-32 -translate-y-32`} />
+                  <div className="absolute top-0 right-0 w-64 h-64 opacity-20">
+                    {categoryName === 'Flights' ? (
+                      <div className="w-full h-full">
+                        {/* Subtle cloud-like shapes for flights */}
+                        <div className="absolute top-8 right-8 w-32 h-16 bg-white/30 rounded-full blur-sm" />
+                        <div className="absolute top-16 right-16 w-24 h-12 bg-white/20 rounded-full blur-sm" />
+                        <div className="absolute top-24 right-4 w-20 h-10 bg-white/25 rounded-full blur-sm" />
+                      </div>
+                    ) : (
+                      <div className={`w-full h-full rounded-full ${categoryColors.text.replace('text-', 'bg-')} transform translate-x-32 -translate-y-32`} />
+                    )}
                   </div>
                 </div>
               </motion.div>
