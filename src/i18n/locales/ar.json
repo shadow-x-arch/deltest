@@ -9,9 +9,8 @@
     "contact": "اتصال",
     "cart": "عربة التسوق",
     "categories": {
-      "flights": "رحلات",
+      "travel": "سفر",
       "electronics": "إلكترونيات",
-      "hotels": "فنادق",
       "cars": "سيارات",
       "furniture": "أثاث",
       "beverage": "مشروبات"

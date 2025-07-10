@@ -25,9 +25,8 @@ import { LanguageSelector } from './LanguageSelector';
 import { RegisterModal } from './RegisterModal';
 
 const categories = [
-  { name: 'Flights', path: '/flights', icon: Plane },
+  { name: 'Travel', path: '/travel', icon: Plane },
   { name: 'Electronics', path: '/electronics', icon: Smartphone },
-  { name: 'Hotels', path: '/hotels', icon: Hotel },
   { name: 'Cars', path: '/cars', icon: Car },
   { name: 'Furniture', path: '/furniture', icon: Sofa },
   { name: 'Beverage', path: '/beverage', icon: Coffee },

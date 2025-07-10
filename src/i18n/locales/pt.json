@@ -9,9 +9,8 @@
     "contact": "Contato",
     "cart": "Carrinho",
     "categories": {
-      "flights": "Voos",
+      "travel": "Viagem",
       "electronics": "Eletrônicos",
-      "hotels": "Hotéis",
       "cars": "Carros",
       "furniture": "Móveis",
       "beverage": "Bebidas"

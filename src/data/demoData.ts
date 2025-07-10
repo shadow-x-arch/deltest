@@ -1,7 +1,7 @@
 import { Product, Bonus } from '../types';
 
 export const demoProducts: Product[] = [
-  // Flights (20 items)
+  // Travel - Flights (20 items)
   {
     id: 'flight-1',
     name: 'NYC to London Round Trip',
@@ -12,7 +12,7 @@ export const demoProducts: Product[] = [
     text: 'Direct flights with premium economy seating and meal service.',
     orders: 340,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -25,7 +25,7 @@ export const demoProducts: Product[] = [
     text: 'Business class experience with flat-bed seating.',
     orders: 189,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -38,7 +38,7 @@ export const demoProducts: Product[] = [
     text: 'Scenic route over the Atlantic with entertainment system.',
     orders: 267,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -51,7 +51,7 @@ export const demoProducts: Product[] = [
     text: 'Direct overnight flight with complimentary wine service.',
     orders: 203,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -64,7 +64,7 @@ export const demoProducts: Product[] = [
     text: 'Long-haul flight with premium amenities and lounge access.',
     orders: 145,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -77,7 +77,7 @@ export const demoProducts: Product[] = [
     text: 'Cultural journey with Italian meal service.',
     orders: 298,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -90,7 +90,7 @@ export const demoProducts: Product[] = [
     text: 'Gateway to Europe with modern aircraft.',
     orders: 234,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -103,7 +103,7 @@ export const demoProducts: Product[] = [
     text: 'Central European hub with efficient connections.',
     orders: 176,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -116,7 +116,7 @@ export const demoProducts: Product[] = [
     text: 'Luxury Middle Eastern experience with premium service.',
     orders: 167,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -129,7 +129,7 @@ export const demoProducts: Product[] = [
     text: 'Gateway to India with authentic cuisine onboard.',
     orders: 189,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -142,7 +142,7 @@ export const demoProducts: Product[] = [
     text: 'Asian adventure with modern entertainment systems.',
     orders: 123,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -155,7 +155,7 @@ export const demoProducts: Product[] = [
     text: 'Ancient wonders await with comfortable seating.',
     orders: 98,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -168,7 +168,7 @@ export const demoProducts: Product[] = [
     text: 'South American adventure with Brazilian hospitality.',
     orders: 215,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -181,7 +181,7 @@ export const demoProducts: Product[] = [
     text: 'Portuguese charm with coastal views upon arrival.',
     orders: 267,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -194,7 +194,7 @@ export const demoProducts: Product[] = [
     text: 'Nordic adventure with Scandinavian design aesthetic.',
     orders: 145,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -207,7 +207,7 @@ export const demoProducts: Product[] = [
     text: 'Classical European experience with musical heritage.',
     orders: 189,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -220,7 +220,7 @@ export const demoProducts: Product[] = [
     text: 'Northern European gateway with aurora possibilities.',
     orders: 134,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -233,7 +233,7 @@ export const demoProducts: Product[] = [
     text: 'Alpine adventure with Swiss precision service.',
     orders: 167,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -246,7 +246,7 @@ export const demoProducts: Product[] = [
     text: 'European Union hub with chocolate and waffle service.',
     orders: 223,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -259,7 +259,7 @@ export const demoProducts: Product[] = [
     text: 'Medieval charm meets modern comfort in Central Europe.',
     orders: 178,
     types: 'International',
-    category: 'Flights',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
@@ -525,7 +525,7 @@ export const demoProducts: Product[] = [
     image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 
-  // Hotels (20 items)
+  // Travel - Hotels (20 items)
   {
     id: 'hotel-1',
     name: 'Grand Plaza Hotel NYC',
@@ -536,7 +536,7 @@ export const demoProducts: Product[] = [
     text: 'Luxury hotel in the heart of Manhattan with skyline views.',
     orders: 1234,
     types: 'Luxury',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -549,7 +549,7 @@ export const demoProducts: Product[] = [
     text: 'Overwater villa with crystal clear lagoon and private beach.',
     orders: 456,
     types: 'Beach Resort',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -562,7 +562,7 @@ export const demoProducts: Product[] = [
     text: 'Modern business hotel near Shibuya with excellent amenities.',
     orders: 2345,
     types: 'Business',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -575,7 +575,7 @@ export const demoProducts: Product[] = [
     text: 'Cozy mountain lodge with panoramic Alpine views.',
     orders: 789,
     types: 'Mountain Lodge',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -588,7 +588,7 @@ export const demoProducts: Product[] = [
     text: 'Iconic casino hotel with world-class entertainment.',
     orders: 3456,
     types: 'Casino',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -601,7 +601,7 @@ export const demoProducts: Product[] = [
     text: 'Charming boutique hotel in the historic Marais district.',
     orders: 1123,
     types: 'Boutique',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -614,7 +614,7 @@ export const demoProducts: Product[] = [
     text: 'Serene wellness retreat with spa treatments and yoga.',
     orders: 567,
     types: 'Wellness',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -627,7 +627,7 @@ export const demoProducts: Product[] = [
     text: 'Historic inn with traditional British charm and modern comfort.',
     orders: 1789,
     types: 'Historic',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -640,7 +640,7 @@ export const demoProducts: Product[] = [
     text: 'Ultra-luxury resort with private beach and gold-plated amenities.',
     orders: 345,
     types: 'Luxury',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -653,7 +653,7 @@ export const demoProducts: Product[] = [
     text: 'Modern beachfront hotel with Mediterranean cuisine.',
     orders: 1567,
     types: 'Beach',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -666,7 +666,7 @@ export const demoProducts: Product[] = [
     text: 'Stunning cliff-side villa with infinity pool and sunset views.',
     orders: 234,
     types: 'Villa',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -679,7 +679,7 @@ export const demoProducts: Product[] = [
     text: 'Authentic Japanese inn with tatami rooms and kaiseki dining.',
     orders: 678,
     types: 'Traditional',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -692,7 +692,7 @@ export const demoProducts: Product[] = [
     text: 'Romantic vineyard hotel with wine tasting and gourmet dining.',
     orders: 890,
     types: 'Vineyard',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -705,7 +705,7 @@ export const demoProducts: Product[] = [
     text: 'Unique glass igloo hotel perfect for aurora viewing.',
     orders: 456,
     types: 'Unique',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -718,7 +718,7 @@ export const demoProducts: Product[] = [
     text: 'Vibrant beachfront resort with samba lessons and caipirinha.',
     orders: 1234,
     types: 'Beach Resort',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -731,7 +731,7 @@ export const demoProducts: Product[] = [
     text: 'Medieval castle converted into luxury hotel with ghost tours.',
     orders: 345,
     types: 'Historic',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -744,7 +744,7 @@ export const demoProducts: Product[] = [
     text: 'Traditional riad with rooftop terrace and hammam spa.',
     orders: 1567,
     types: 'Traditional',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -757,7 +757,7 @@ export const demoProducts: Product[] = [
     text: 'Cozy ski lodge with fireplace and direct slope access.',
     orders: 789,
     types: 'Ski Resort',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -770,7 +770,7 @@ export const demoProducts: Product[] = [
     text: 'Unique floating hotel on pristine lake with fishing activities.',
     orders: 2345,
     types: 'Unique',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
   {
@@ -783,7 +783,7 @@ export const demoProducts: Product[] = [
     text: 'Remote lodge with stargazing tours and wildlife encounters.',
     orders: 567,
     types: 'Adventure',
-    category: 'Hotels',
+    category: 'Travel',
     image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=400'
   },
 

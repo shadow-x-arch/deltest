@@ -30,9 +30,8 @@
     "contact": "Contacto",
     "cart": "Carrito",
     "categories": {
-      "flights": "Vuelos",
+      "travel": "Viajes",
       "electronics": "Electrónicos",
-      "hotels": "Hoteles",
       "cars": "Autos",
       "furniture": "Muebles",
       "beverage": "Bebidas"
@@ -54,9 +53,8 @@
       "title": "Comprar por Categoría",
       "subtitle": "Explora nuestra diversa colección de productos en diferentes categorías",
       "descriptions": {
-        "flights": "Reserva vuelos y gana millas de viaje",
+        "travel": "Reserva vuelos y hoteles, gana millas de viaje",
         "electronics": "Los últimos gadgets y tecnología",
-        "hotels": "Estadías de lujo en todo el mundo",
         "cars": "Vehículos premium y alquileres",
         "furniture": "Mobiliario moderno para el hogar",
         "beverage": "Bebidas premium y más"

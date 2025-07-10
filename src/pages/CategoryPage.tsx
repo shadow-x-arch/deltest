@@ -11,9 +11,8 @@ import { useTheme } from '../hooks/useTheme';
 import { Product } from '../types';
 
 const categoryMapping: Record<string, Product['category']> = {
-  '/flights': 'Flights',
+  '/travel': 'Travel',
   '/electronics': 'Electronics',
-  '/hotels': 'Hotels',
   '/cars': 'Cars',
   '/furniture': 'Furniture',
   '/beverage': 'Beverage'
@@ -21,7 +20,7 @@ const categoryMapping: Record<string, Product['category']> = {
 
 const getCategoryColors = (category: Product['category']) => {
   switch (category) {
-    case 'Flights':
+    case 'Travel':
       return {
         gradient: 'from-slate-300 via-blue-100 to-white',
         bg: 'bg-gradient-to-b from-slate-200 via-blue-50 to-white dark:from-slate-800 dark:via-blue-900/30 dark:to-gray-900',
@@ -34,13 +33,6 @@ const getCategoryColors = (category: Product['category']) => {
         bg: 'bg-purple-50 dark:bg-purple-900/20',
         text: 'text-purple-700 dark:text-purple-400',
         border: 'border-purple-200 dark:border-purple-700'
-      };
-    case 'Hotels':
-      return {
-        gradient: 'from-emerald-500 to-emerald-600',
-        bg: 'bg-emerald-50 dark:bg-emerald-900/20',
-        text: 'text-emerald-700 dark:text-emerald-400',
-        border: 'border-emerald-200 dark:border-emerald-700'
       };
     case 'Cars':
       return {
@@ -159,23 +151,17 @@ export const CategoryPage: React.FC = () => {
 
   const getCategoryDescription = (category: Product['category']) => {
     switch (category) {
-      case 'Flights':
+      case 'Travel':
         return {
-          title: 'Explore the World with Premium Flights',
-          description: 'Discover amazing destinations with our curated selection of premium flights. Earn miles with every booking and enjoy exclusive travel benefits.',
-          features: ['Premium Economy & Business Class', 'Direct Routes Available', 'Flexible Booking Options', 'Lounge Access Included']
+          title: 'Explore the World with Premium Travel',
+          description: 'Discover amazing destinations with our curated selection of premium flights and luxury accommodations. Earn miles with every booking and enjoy exclusive travel benefits.',
+          features: ['Premium Flights & Hotels', 'Direct Routes Available', 'Luxury Accommodations', 'Exclusive Travel Benefits']
         };
       case 'Electronics':
         return {
           title: 'Latest Technology & Gadgets',
           description: 'Stay ahead with cutting-edge electronics and innovative gadgets. From smartphones to smart home devices, find everything you need.',
           features: ['Latest Models Available', 'Warranty Included', 'Expert Support', 'Fast Shipping']
-        };
-      case 'Hotels':
-        return {
-          title: 'Luxury Accommodations Worldwide',
-          description: 'Experience comfort and luxury with our handpicked selection of premium hotels and resorts around the globe.',
-          features: ['5-Star Properties', 'Prime Locations', 'Spa & Wellness', 'Concierge Services']
         };
       case 'Cars':
         return {
@@ -249,9 +235,9 @@ export const CategoryPage: React.FC = () => {
                   
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-64 h-64 opacity-20">
-                    {categoryName === 'Flights' ? (
+                    {categoryName === 'Travel' ? (
                       <div className="w-full h-full">
-                        {/* Subtle cloud-like shapes for flights */}
+                        {/* Subtle cloud-like shapes for travel */}
                         <div className="absolute top-8 right-8 w-32 h-16 bg-white/30 rounded-full blur-sm" />
                         <div className="absolute top-16 right-16 w-24 h-12 bg-white/20 rounded-full blur-sm" />
                         <div className="absolute top-24 right-4 w-20 h-10 bg-white/25 rounded-full blur-sm" />
@@ -272,7 +258,7 @@ export const CategoryPage: React.FC = () => {
               >
                 <SearchBar
                   onSearch={setSearchQuery}
-                  placeholder={`Search ${categoryName.toLowerCase()}...`}
+                  placeholder={`Search ${categoryName === 'Travel' ? 'flights & hotels' : categoryName.toLowerCase()}...`}
                 />
               </motion.div>
 

@@ -30,9 +30,8 @@
     "contact": "Kontakt",
     "cart": "Warenkorb",
     "categories": {
-      "flights": "Flüge",
+      "travel": "Reisen",
       "electronics": "Elektronik",
-      "hotels": "Hotels",
       "cars": "Autos",
       "furniture": "Möbel",
       "beverage": "Getränke"
@@ -54,9 +53,8 @@
       "title": "Nach Kategorie Einkaufen",
       "subtitle": "Erkunden Sie unsere vielfältige Produktkollektion in verschiedenen Kategorien",
       "descriptions": {
-        "flights": "Buchen Sie Flüge und sammeln Sie Reisemeilen",
+        "travel": "Buchen Sie Flüge und Hotels, sammeln Sie Reisemeilen",
         "electronics": "Neueste Gadgets und Technologie",
-        "hotels": "Luxusaufenthalte weltweit",
         "cars": "Premium-Fahrzeuge und Mietwagen",
         "furniture": "Moderne Wohnungseinrichtung",
         "beverage": "Premium-Getränke und mehr"

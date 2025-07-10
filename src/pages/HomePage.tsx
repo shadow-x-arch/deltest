@@ -22,9 +22,8 @@ import { ProductDetailModal } from '../components/ProductDetailModal';
 import { Product } from '../types';
 
 const categories = [
-  { name: 'Flights', path: '/flights', icon: Plane, color: 'from-blue-500 to-blue-600', description: 'Book flights and earn travel miles' },
+  { name: 'Travel', path: '/travel', icon: Plane, color: 'from-blue-500 to-blue-600', description: 'Book flights & hotels, earn travel miles' },
   { name: 'Electronics', path: '/electronics', icon: Smartphone, color: 'from-purple-500 to-purple-600', description: 'Latest gadgets and tech' },
-  { name: 'Hotels', path: '/hotels', icon: Hotel, color: 'from-emerald-500 to-emerald-600', description: 'Luxury stays worldwide' },
   { name: 'Cars', path: '/cars', icon: Car, color: 'from-red-500 to-red-600', description: 'Premium vehicles and rentals' },
   { name: 'Furniture', path: '/furniture', icon: Sofa, color: 'from-amber-500 to-amber-600', description: 'Modern home furnishing' },
   { name: 'Beverage', path: '/beverage', icon: Coffee, color: 'from-pink-500 to-pink-600', description: 'Premium drinks and more' },

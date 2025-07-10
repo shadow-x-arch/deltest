@@ -30,9 +30,8 @@
     "contact": "Contact",
     "cart": "Panier",
     "categories": {
-      "flights": "Vols",
+      "travel": "Voyage",
       "electronics": "Électronique",
-      "hotels": "Hôtels",
       "cars": "Voitures",
       "furniture": "Meubles",
       "beverage": "Boissons"
@@ -54,9 +53,8 @@
       "title": "Acheter par Catégorie",
       "subtitle": "Explorez notre collection diversifiée de produits dans différentes catégories",
       "descriptions": {
-        "flights": "Réservez des vols et gagnez des miles de voyage",
+        "travel": "Réservez des vols et hôtels, gagnez des miles de voyage",
         "electronics": "Les derniers gadgets et technologies",
-        "hotels": "Séjours de luxe dans le monde entier",
         "cars": "Véhicules premium et locations",
         "furniture": "Mobilier moderne pour la maison",
         "beverage": "Boissons premium et plus"

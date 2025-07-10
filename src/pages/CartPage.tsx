@@ -57,7 +57,7 @@ export const CartPage: React.FC = () => {
               Start shopping to add items to your cart and earn miles!
             </p>
             <Link
-              to="/electronics"
+              to="/travel"
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               <ArrowLeft className="w-4 h-4" />

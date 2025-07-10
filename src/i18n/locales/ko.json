@@ -9,9 +9,8 @@
     "contact": "연락처",
     "cart": "장바구니",
     "categories": {
-      "flights": "항공편",
+      "travel": "여행",
       "electronics": "전자제품",
-      "hotels": "호텔",
       "cars": "자동차",
       "furniture": "가구",
       "beverage": "음료"
