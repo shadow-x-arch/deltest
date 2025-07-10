@@ -30,11 +30,10 @@
     "contact": "Contact",
     "cart": "Cart",
     "categories": {
-      "flights": "Flights",
+      "house": "House",
+      "cars": "Cars", 
+      "travel": "Travel",
       "electronics": "Electronics",
-      "hotels": "Hotels",
-      "cars": "Cars",
-      "furniture": "Furniture",
       "beverage": "Beverage"
     }
   },
@@ -54,12 +53,11 @@
       "title": "Shop by Category",
       "subtitle": "Explore our diverse collection of products across different categories",
       "descriptions": {
-        "flights": "Book flights and earn travel miles",
+        "house": "Style your place, stack your gift",
+        "cars": "Buy your ride, fuel your miles",
+        "travel": "Fly away, stay caution",
         "electronics": "Latest gadgets and tech",
-        "hotels": "Luxury stays worldwide",
-        "cars": "Premium vehicles and rentals",
-        "furniture": "Modern home furnishing",
-        "beverage": "Premium drinks and more"
+        "beverage": "Sip in style, taste your rewards"
       }
     },
     "featured": {
