@@ -15,7 +15,7 @@ import {
   Car,
   Sofa,
   Coffee,
-  User
+  User,
   MessageCircle
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
