@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { toast } from 'sonner';
 import { Product, User, Bonus, CartItem, Order } from '../types';
 import { demoProducts, bonusRewards } from '../data/demoData';
 
@@ -55,11 +56,12 @@ export const useStore = create<StoreState>()(
         // Simple registration - in production, use proper authentication
         // Check if email already exists (mock check)
         if (userData.email === 'existing@example.com') {
+          toast.error('Email already exists');
           return false;
         }
         
         // In a real app, you would send this to your backend
-        console.log('User registered:', userData);
+        toast.success(`Welcome ${userData.name}! Your account has been created successfully.`);
         return true;
       },
 
@@ -67,13 +69,16 @@ export const useStore = create<StoreState>()(
         // Simple password check - in production, use proper authentication
         if (password === 'admin123') {
           set({ isAdminAuthenticated: true });
+          toast.success('Admin login successful');
           return true;
         }
+        toast.error('Invalid admin password');
         return false;
       },
 
       adminLogout: () => {
         set({ isAdminAuthenticated: false });
+        toast.info('Admin logged out successfully');
       },
 
       addProduct: (product) => {
@@ -84,6 +89,7 @@ export const useStore = create<StoreState>()(
         set((state) => ({
           products: [...state.products, newProduct]
         }));
+        toast.success(`Product "${product.name}" added successfully`);
       },
 
       updateProduct: (id, updates) => {
@@ -92,18 +98,27 @@ export const useStore = create<StoreState>()(
             product.id === id ? { ...product, ...updates } : product
           )
         }));
+        toast.success('Product updated successfully');
       },
 
       deleteProduct: (id) => {
+        const state = get();
+        const product = state.products.find(p => p.id === id);
         set((state) => ({
           products: state.products.filter(product => product.id !== id)
         }));
+        if (product) {
+          toast.success(`Product "${product.name}" deleted successfully`);
+        }
       },
 
       purchaseProduct: (productId) => {
         const state = get();
         const product = state.products.find(p => p.id === productId);
-        if (!product || product.status === 'Out of Stock') return;
+        if (!product || product.status === 'Out of Stock') {
+          toast.error('Product is not available for purchase');
+          return;
+        }
 
         // Calculate final price with discount
         const discountAmount = (product.amount * state.activeDiscount) / 100;
@@ -123,14 +138,18 @@ export const useStore = create<StoreState>()(
           activeDiscount: 0 // Clear discount after use
         }));
         
-        // Show success feedback (you can add toast notifications here)
-        console.log(`Purchased ${product.name} and earned ${product.miles} miles!`);
+        toast.success(`🎉 Purchased ${product.name} and earned ${product.miles} miles!`, {
+          description: `Total spent: $${finalPrice.toLocaleString()}`
+        });
       },
 
       addToCart: (productId, quantity = 1) => {
         const state = get();
         const product = state.products.find(p => p.id === productId);
-        if (!product || product.status === 'Out of Stock') return;
+        if (!product || product.status === 'Out of Stock') {
+          toast.error('Product is not available');
+          return;
+        }
 
         const existingItem = state.cart.find(item => item.productId === productId);
         
@@ -147,6 +166,7 @@ export const useStore = create<StoreState>()(
                 : item
             )
           }));
+          toast.success(`Updated ${product.name} quantity in cart`);
         } else {
           // Add new item to cart
           const cartItem: CartItem = {
@@ -163,13 +183,21 @@ export const useStore = create<StoreState>()(
           set((state) => ({
             cart: [...state.cart, cartItem]
           }));
+          toast.success(`Added ${product.name} to cart`, {
+            description: `${quantity} item${quantity > 1 ? 's' : ''} added`
+          });
         }
       },
 
       removeFromCart: (productId) => {
+        const state = get();
+        const item = state.cart.find(item => item.productId === productId);
         set((state) => ({
           cart: state.cart.filter(item => item.productId !== productId)
         }));
+        if (item) {
+          toast.info(`Removed ${item.name} from cart`);
+        }
       },
 
       updateCartQuantity: (productId, quantity) => {
@@ -178,6 +206,8 @@ export const useStore = create<StoreState>()(
           return;
         }
 
+        const state = get();
+        const item = state.cart.find(item => item.productId === productId);
         set((state) => ({
           cart: state.cart.map(item =>
             item.productId === productId
@@ -190,15 +220,22 @@ export const useStore = create<StoreState>()(
               : item
           )
         }));
+        if (item) {
+          toast.info(`Updated ${item.name} quantity to ${quantity}`);
+        }
       },
 
       clearCart: () => {
         set({ cart: [] });
+        toast.info('Cart cleared');
       },
 
       checkout: () => {
         const state = get();
-        if (state.cart.length === 0) return;
+        if (state.cart.length === 0) {
+          toast.error('Your cart is empty');
+          return;
+        }
 
         const { totalAmount, totalMiles } = state.getCartTotal();
         const discountAmount = (totalAmount * state.activeDiscount) / 100;
@@ -234,11 +271,21 @@ export const useStore = create<StoreState>()(
           activeDiscount: 0
         }));
       },
+        toast.success('🎉 Order placed successfully!', {
+          description: `Order #${newOrder.id.slice(-8)} • Earned ${finalMiles} miles`
+        });
 
       redeemBonus: (bonusId) => {
         const state = get();
         const bonus = state.bonuses.find(b => b.id === bonusId);
-        if (!bonus || state.user.miles < bonus.milesRequired || state.activeDiscount > 0) return;
+        if (!bonus || state.user.miles < bonus.milesRequired) {
+          toast.error('Not enough miles to redeem this bonus');
+          return;
+        }
+        if (state.activeDiscount > 0) {
+          toast.error('You already have an active discount');
+          return;
+        }
 
         set((state) => ({
           user: {
@@ -248,12 +295,14 @@ export const useStore = create<StoreState>()(
           activeDiscount: bonus.discount
         }));
         
-        // Show success feedback
-        console.log(`Redeemed ${bonus.name} for ${bonus.milesRequired} miles!`);
+        toast.success(`🎁 Redeemed ${bonus.name}!`, {
+          description: `Used ${bonus.milesRequired} miles • ${bonus.discount}% discount applied`
+        });
       },
 
       clearDiscount: () => {
         set({ activeDiscount: 0 });
+        toast.info('Discount cleared');
       },
 
       addMiles: (miles) => {
@@ -263,6 +312,7 @@ export const useStore = create<StoreState>()(
             miles: state.user.miles + miles
           }
         }));
+        toast.success(`+${miles} miles added to your account!`);
       },
 
       getCartTotal: () => {

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from 'sonner';
 import { Header } from './components/Header';
 import { HomePage } from './pages/HomePage';
 import { CategoryPage } from './pages/CategoryPage';
@@ -43,6 +44,12 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+        <Toaster 
+          position="top-right"
+          richColors
+          closeButton
+          theme={isDarkMode ? 'dark' : 'light'}
+        />
       </div>
     </Router>
   );

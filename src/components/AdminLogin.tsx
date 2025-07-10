@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { toast } from 'sonner';
 import { Shield, Eye, EyeOff, Lock } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { useTheme } from '../hooks/useTheme';
