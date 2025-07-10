@@ -8,7 +8,8 @@ export interface Product {
   text: string;
   orders: number;
   types: string;
-  category: 'Flights' | 'Electronics' | 'Hotels' | 'Cars' | 'Furniture' | 'Beverage';
+  category: 'House' | 'Cars' | 'Travel' | 'Electronics' | 'Beverage';
+  subcategory?: 'Furniture' | 'Appliance' | 'Rent' | 'Sale' | 'Airline Tickets' | 'Hotels' | 'Apartments' | 'Devices' | 'Add-ons' | 'Alcohol' | 'Non-Alcohol';
   image?: string;
 }
 

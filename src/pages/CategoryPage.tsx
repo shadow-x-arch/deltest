@@ -11,55 +11,155 @@ import { useTheme } from '../hooks/useTheme';
 import { Product } from '../types';
 
 const categoryMapping: Record<string, Product['category']> = {
-  '/flights': 'Flights',
-  '/electronics': 'Electronics',
-  '/hotels': 'Hotels',
+  '/house': 'House',
   '/cars': 'Cars',
-  '/furniture': 'Furniture',
+  '/travel': 'Travel',
+  '/electronics': 'Electronics',
   '/beverage': 'Beverage'
 };
 
 const getCategoryColors = (category: Product['category']) => {
   switch (category) {
-    case 'Flights':
+    case 'House':
       return {
-        gradient: 'from-slate-300 via-blue-100 to-white',
-        bg: 'bg-gradient-to-b from-slate-200 via-blue-50 to-white dark:from-slate-800 dark:via-blue-900/30 dark:to-gray-900',
-        text: 'text-slate-700 dark:text-slate-300',
-        border: 'border-slate-200 dark:border-slate-700'
-      };
-    case 'Electronics':
-      return {
-        gradient: 'from-purple-500 to-purple-600',
-        bg: 'bg-purple-50 dark:bg-purple-900/20',
-        text: 'text-purple-700 dark:text-purple-400',
-        border: 'border-purple-200 dark:border-purple-700'
-      };
-    case 'Hotels':
-      return {
-        gradient: 'from-emerald-500 to-emerald-600',
-        bg: 'bg-emerald-50 dark:bg-emerald-900/20',
-        text: 'text-emerald-700 dark:text-emerald-400',
-        border: 'border-emerald-200 dark:border-emerald-700'
+        gradient: 'from-amber-500 to-orange-600',
+        bg: 'bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 dark:from-amber-900/20 dark:via-orange-900/20 dark:to-yellow-900/20',
+        text: 'text-amber-800 dark:text-amber-300',
+        border: 'border-amber-200 dark:border-amber-700'
       };
     case 'Cars':
       return {
         gradient: 'from-red-500 to-red-600',
-        bg: 'bg-red-50 dark:bg-red-900/20',
+        bg: 'bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 dark:from-red-900/20 dark:via-rose-900/20 dark:to-pink-900/20',
         text: 'text-red-700 dark:text-red-400',
         border: 'border-red-200 dark:border-red-700'
       };
-    case 'Furniture':
+    case 'Travel':
       return {
-        gradient: 'from-amber-500 to-amber-600',
-        bg: 'bg-amber-50 dark:bg-amber-900/20',
-        text: 'text-amber-700 dark:text-amber-400',
-        border: 'border-amber-200 dark:border-amber-700'
+        gradient: 'from-blue-500 to-cyan-600',
+        bg: 'bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 dark:from-blue-900/20 dark:via-cyan-900/20 dark:to-sky-900/20',
+        text: 'text-blue-700 dark:text-blue-400',
+        border: 'border-blue-200 dark:border-blue-700'
+      };
+    case 'Electronics':
+      return {
+        gradient: 'from-purple-500 to-purple-600',
+        bg: 'bg-gradient-to-br from-purple-50 via-indigo-50 to-violet-50 dark:from-purple-900/20 dark:via-indigo-900/20 dark:to-violet-900/20',
+        text: 'text-purple-700 dark:text-purple-400',
+        border: 'border-purple-200 dark:border-purple-700'
       };
     case 'Beverage':
       return {
-        gradient: 'from-pink-500 to-pink-600',
-        bg: 'bg-pink-50 dark:bg-pink-900/20',
+        gradient: 'from-emerald-500 to-teal-600',
+        bg: 'bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 dark:from-emerald-900/20 dark:via-teal-900/20 dark:to-green-900/20',
+        text: 'text-emerald-700 dark:text-emerald-400',
+        border: 'border-emerald-200 dark:border-emerald-700'
+      };
+    default:
+      return {
+        gradient: 'from-gray-500 to-gray-600',
+        bg: 'bg-gray-50 dark:bg-gray-900/20',
+        text: 'text-gray-700 dark:text-gray-400',
+        border: 'border-gray-200 dark:border-gray-700'
+      };
+  }
+};
+
+const getCategoryInfo = (category: Product['category']) => {
+  switch (category) {
+    case 'House':
+      return {
+        title: 'Style Your Place, Stack Your Gift',
+        description: 'Transform your home with our premium furniture and appliances. From modern furniture to smart appliances, create the perfect living space.',
+        features: ['Premium Furniture', 'Smart Appliances', 'Home Decor', 'Quality Guarantee'],
+        subcategories: [
+          { name: 'Furniture', description: 'Modern and stylish furniture for every room' },
+          { name: 'Appliance', description: 'Smart home appliances and electronics' }
+        ]
+      };
+    case 'Cars':
+      return {
+        title: 'Buy Your Ride, Fuel Your Miles',
+        description: 'Discover premium vehicles for rent and sale. Whether you need a car for a day or forever, we have the perfect ride for you.',
+        features: ['Cars for Rent', 'Cars for Sale', 'Premium Fleet', 'Flexible Terms'],
+        subcategories: [
+          { name: 'Rent', description: 'Short-term and long-term car rentals' },
+          { name: 'Sale', description: 'Premium vehicles for purchase' }
+        ]
+      };
+    case 'Travel':
+      return {
+        title: 'Fly Away, Stay Caution',
+        description: 'Plan your perfect journey with our travel services. From airline tickets to luxury accommodations, we make travel seamless.',
+        features: ['Airline Tickets', 'Luxury Hotels', 'Vacation Apartments', 'Travel Insurance'],
+        subcategories: [
+          { name: 'Airline Tickets', description: 'Domestic and international flights' },
+          { name: 'Hotels', description: 'Luxury hotels and resorts worldwide' },
+          { name: 'Apartments', description: 'Vacation rentals and apartments' }
+        ]
+      };
+    case 'Electronics':
+      return {
+        title: 'Power On',
+        description: 'Stay ahead with cutting-edge electronics and innovative devices. From smartphones to smart home devices, find everything you need.',
+        features: ['Latest Devices', 'Smart Add-ons', 'Warranty Included', 'Expert Support'],
+        subcategories: [
+          { name: 'Devices', description: 'Smartphones, laptops, and gadgets' },
+          { name: 'Add-ons', description: 'Accessories and smart home devices' }
+        ]
+      };
+    case 'Beverage':
+      return {
+        title: 'Sip in Style, Taste Your Rewards',
+        description: 'Indulge in our premium beverage collection. From fine wines to craft spirits and refreshing non-alcoholic drinks.',
+        features: ['Premium Selection', 'Rare Finds', 'Expert Curation', 'Temperature Controlled'],
+        subcategories: [
+          { name: 'Alcohol', description: 'Fine wines, spirits, and craft beverages' },
+          { name: 'Non-Alcohol', description: 'Premium coffee, tea, and soft drinks' }
+        ]
+      };
+    default:
+      return {
+        title: 'Premium Products',
+        description: 'Discover our curated selection of premium products.',
+        features: ['Quality Guaranteed', 'Fast Shipping', 'Expert Support', 'Miles Rewards'],
+        subcategories: []
+      };
+  }
+};
+
+const getSubcategoryProducts = (products: Product[], category: Product['category'], subcategory?: string) => {
+  const categoryProducts = products.filter(product => product.category === category);
+  
+  if (!subcategory) return categoryProducts;
+  
+  // Map old categories to new subcategories
+  const subcategoryMapping: Record<string, string[]> = {
+    'House': {
+      'Furniture': ['Furniture'],
+      'Appliance': ['Electronics'] // Some electronics can be appliances
+    },
+    'Cars': {
+      'Rent': ['Cars'],
+      'Sale': ['Cars']
+    },
+    'Travel': {
+      'Airline Tickets': ['Flights'],
+      'Hotels': ['Hotels'],
+      'Apartments': ['Hotels'] // Some hotels can be apartments
+    },
+    'Electronics': {
+      'Devices': ['Electronics'],
+      'Add-ons': ['Electronics']
+    },
+    'Beverage': {
+      'Alcohol': ['Beverage'],
+      'Non-Alcohol': ['Beverage']
+    }
+  };
+  
+  return categoryProducts;
+};
         text: 'text-pink-700 dark:text-pink-400',
         border: 'border-pink-200 dark:border-pink-700'
       };
@@ -89,7 +189,7 @@ export const CategoryPage: React.FC = () => {
   const categoryColors = getCategoryColors(categoryName);
   
   if (!categoryName) {
-    return <Navigate to="/electronics" replace />;
+    return <Navigate to="/house" replace />;
   }
   
   const filteredProducts = useMemo(() => {
@@ -150,61 +250,14 @@ export const CategoryPage: React.FC = () => {
     return filtered;
   }, [products, categoryName, sortBy, sortOrder, filterBy, priceRange, searchQuery]);
 
-  const categoryDisplayName = categoryName.toLowerCase();
+  const categoryInfo = getCategoryInfo(categoryName);
 
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
     setShowProductModal(true);
   };
 
-  const getCategoryDescription = (category: Product['category']) => {
-    switch (category) {
-      case 'Flights':
-        return {
-          title: 'Explore the World with Premium Flights',
-          description: 'Discover amazing destinations with our curated selection of premium flights. Earn miles with every booking and enjoy exclusive travel benefits.',
-          features: ['Premium Economy & Business Class', 'Direct Routes Available', 'Flexible Booking Options', 'Lounge Access Included']
-        };
-      case 'Electronics':
-        return {
-          title: 'Latest Technology & Gadgets',
-          description: 'Stay ahead with cutting-edge electronics and innovative gadgets. From smartphones to smart home devices, find everything you need.',
-          features: ['Latest Models Available', 'Warranty Included', 'Expert Support', 'Fast Shipping']
-        };
-      case 'Hotels':
-        return {
-          title: 'Luxury Accommodations Worldwide',
-          description: 'Experience comfort and luxury with our handpicked selection of premium hotels and resorts around the globe.',
-          features: ['5-Star Properties', 'Prime Locations', 'Spa & Wellness', 'Concierge Services']
-        };
-      case 'Cars':
-        return {
-          title: 'Premium Vehicles & Rentals',
-          description: 'Drive in style with our collection of luxury vehicles and premium car rental options for every occasion.',
-          features: ['Luxury Fleet', 'Flexible Rentals', 'Insurance Included', '24/7 Support']
-        };
-      case 'Furniture':
-        return {
-          title: 'Modern Home Furnishing',
-          description: 'Transform your space with our curated collection of modern furniture and home decor from top designers.',
-          features: ['Designer Collections', 'Quality Materials', 'Custom Options', 'White Glove Delivery']
-        };
-      case 'Beverage':
-        return {
-          title: 'Premium Drinks & Beverages',
-          description: 'Indulge in our selection of premium beverages, from fine wines to artisanal coffee and craft spirits.',
-          features: ['Curated Selection', 'Rare Finds', 'Expert Recommendations', 'Temperature Controlled Shipping']
-        };
-      default:
-        return {
-          title: 'Premium Products',
-          description: 'Discover our curated selection of premium products.',
-          features: ['Quality Guaranteed', 'Fast Shipping', 'Expert Support', 'Miles Rewards']
-        };
-    }
-  };
-
-  const categoryInfo = getCategoryDescription(categoryName);
+  const [selectedSubcategory, setSelectedSubcategory] = React.useState<string | null>(null);
 
   return (
     <>

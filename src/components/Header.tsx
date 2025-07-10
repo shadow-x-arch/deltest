@@ -10,11 +10,10 @@ import {
   Sun, 
   Menu, 
   X,
-  Plane,
-  Smartphone,
-  Hotel,
+  Home,
   Car,
-  Sofa,
+  MapPin,
+  Smartphone,
   Coffee,
   User,
   MessageCircle
@@ -25,11 +24,10 @@ import { LanguageSelector } from './LanguageSelector';
 import { RegisterModal } from './RegisterModal';
 
 const categories = [
-  { name: 'Flights', path: '/flights', icon: Plane },
-  { name: 'Electronics', path: '/electronics', icon: Smartphone },
-  { name: 'Hotels', path: '/hotels', icon: Hotel },
+  { name: 'House', path: '/house', icon: Home },
   { name: 'Cars', path: '/cars', icon: Car },
-  { name: 'Furniture', path: '/furniture', icon: Sofa },
+  { name: 'Travel', path: '/travel', icon: MapPin },
+  { name: 'Electronics', path: '/electronics', icon: Smartphone },
   { name: 'Beverage', path: '/beverage', icon: Coffee },
 ];
 
