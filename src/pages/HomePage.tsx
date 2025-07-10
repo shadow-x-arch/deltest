@@ -69,7 +69,7 @@ export const HomePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/house"
+                  to="/electronics"
                   className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   <ShoppingBag className="w-5 h-5" />
@@ -317,7 +317,7 @@ export const HomePage: React.FC = () => {
 
             <div className="text-center mt-12">
               <Link
-                to="/house"
+                to="/electronics"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 {t('home.featured.viewAll')}

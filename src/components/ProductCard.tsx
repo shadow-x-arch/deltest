@@ -27,9 +27,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index, onView
     }
   };
 
-  // Debug: Log product info
-  console.log('Product:', product.name, 'Category:', product.category);
-
   const discountAmount = (product.amount * activeDiscount) / 100;
   const finalPrice = product.amount - discountAmount;
 

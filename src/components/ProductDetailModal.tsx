@@ -77,13 +77,15 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
 
   const getCategoryIcon = (category: Product['category']) => {
     switch (category) {
-      case 'House':
-        return <Package className="w-4 h-4" />;
-      case 'Cars':
-        return <TrendingUp className="w-4 h-4" />;
-      case 'Travel':
+      case 'Flights':
         return <MapPin className="w-4 h-4" />;
       case 'Electronics':
+        return <Package className="w-4 h-4" />;
+      case 'Hotels':
+        return <Calendar className="w-4 h-4" />;
+      case 'Cars':
+        return <TrendingUp className="w-4 h-4" />;
+      case 'Furniture':
         return <Package className="w-4 h-4" />;
       case 'Beverage':
         return <Clock className="w-4 h-4" />;

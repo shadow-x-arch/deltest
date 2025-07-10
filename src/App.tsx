@@ -30,10 +30,11 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/house" element={<CategoryPage />} />
-            <Route path="/cars" element={<CategoryPage />} />
-            <Route path="/travel" element={<CategoryPage />} />
+            <Route path="/flights" element={<CategoryPage />} />
             <Route path="/electronics" element={<CategoryPage />} />
+            <Route path="/hotels" element={<CategoryPage />} />
+            <Route path="/cars" element={<CategoryPage />} />
+            <Route path="/furniture" element={<CategoryPage />} />
             <Route path="/beverage" element={<CategoryPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/account" element={<AccountPage />} />

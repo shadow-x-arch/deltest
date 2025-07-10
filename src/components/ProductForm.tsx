@@ -24,8 +24,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
     text: '',
     orders: '0',
     types: '',
-    category: 'House',
-    subcategory: ''
+    category: 'Electronics' as Product['category']
   });
 
   // Update form data when editing product changes
@@ -40,8 +39,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
         text: editingProduct.text,
         orders: editingProduct.orders.toString(),
         types: editingProduct.types,
-        category: editingProduct.category,
-        subcategory: editingProduct.subcategory || ''
+        category: editingProduct.category
       });
     } else {
       setFormData({
@@ -53,8 +51,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
         text: '',
         orders: '0',
         types: '',
-        category: 'House',
-        subcategory: ''
+        category: 'Electronics'
       });
     }
   }, [editingProduct]);
@@ -71,8 +68,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
       text: formData.text,
       orders: parseInt(formData.orders),
       types: formData.types,
-      category: formData.category,
-      subcategory: formData.subcategory || undefined
+      category: formData.category
     };
 
     if (editingProduct) {
@@ -90,19 +86,15 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
       text: '',
       orders: '0',
       types: '',
-     category: 'House',
-     subcategory: ''
+      category: 'Electronics'
     });
     onClose();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value,
-      // Reset subcategory when category changes
-      ...(name === 'category' ? { subcategory: '' } : {})
+      [e.target.name]: e.target.value
     }));
   };
 
@@ -271,10 +263,11 @@ export const ProductForm: React.FC<ProductFormProps> = ({ isOpen, onClose, editi
                     : 'bg-white border-gray-300 text-gray-900'
                 }`}
               >
-                <option value="House">House</option>
-                <option value="Cars">Cars</option>
-                <option value="Travel">Travel</option>
+                <option value="Flights">Flights</option>
                 <option value="Electronics">Electronics</option>
+                <option value="Hotels">Hotels</option>
+                <option value="Cars">Cars</option>
+                <option value="Furniture">Furniture</option>
                 <option value="Beverage">Beverage</option>
               </select>
             </div>
