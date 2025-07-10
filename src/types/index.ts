@@ -9,7 +9,7 @@ export interface Product {
   orders: number;
   types: string;
   category: 'Travel' | 'Electronics' | 'Cars' | 'House & Furniture' | 'Beverage';
-  subcategory?: 'Flights' | 'Hotels' | 'House Rent' | 'House Sale' | 'Furniture';
+  subcategory?: 'Flights' | 'Hotels' | 'House Rent' | 'House Sale' | 'Furniture' | 'Smartphones' | 'Laptops' | 'Gadgets' | 'Luxury Cars' | 'Electric Cars' | 'Car Rental';
   image?: string;
 }
 

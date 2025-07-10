@@ -10,6 +10,14 @@ import { HouseFurnitureLandingPage } from './pages/HouseFurnitureLandingPage';
 import { HouseRentPage } from './pages/HouseRentPage';
 import { HouseSalePage } from './pages/HouseSalePage';
 import { FurniturePage } from './pages/FurniturePage';
+import { ElectronicsLandingPage } from './pages/ElectronicsLandingPage';
+import { SmartphonesPage } from './pages/SmartphonesPage';
+import { LaptopsPage } from './pages/LaptopsPage';
+import { GadgetsPage } from './pages/GadgetsPage';
+import { CarsLandingPage } from './pages/CarsLandingPage';
+import { LuxuryCarsPage } from './pages/LuxuryCarsPage';
+import { ElectricCarsPage } from './pages/ElectricCarsPage';
+import { CarRentalPage } from './pages/CarRentalPage';
 import { CategoryPage } from './pages/CategoryPage';
 import { CartPage } from './pages/CartPage';
 import { AccountPage } from './pages/AccountPage';
@@ -44,8 +52,14 @@ function App() {
             <Route path="/house-furniture/rent" element={<HouseRentPage />} />
             <Route path="/house-furniture/sale" element={<HouseSalePage />} />
             <Route path="/house-furniture/furniture" element={<FurniturePage />} />
-            <Route path="/electronics" element={<CategoryPage />} />
-            <Route path="/cars" element={<CategoryPage />} />
+            <Route path="/electronics" element={<ElectronicsLandingPage />} />
+            <Route path="/electronics/smartphones" element={<SmartphonesPage />} />
+            <Route path="/electronics/laptops" element={<LaptopsPage />} />
+            <Route path="/electronics/gadgets" element={<GadgetsPage />} />
+            <Route path="/cars" element={<CarsLandingPage />} />
+            <Route path="/cars/luxury" element={<LuxuryCarsPage />} />
+            <Route path="/cars/electric" element={<ElectricCarsPage />} />
+            <Route path="/cars/rental" element={<CarRentalPage />} />
             <Route path="/beverage" element={<CategoryPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/account" element={<AccountPage />} />
