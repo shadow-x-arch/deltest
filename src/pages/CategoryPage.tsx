@@ -181,7 +181,17 @@ export const CategoryPage: React.FC = () => {
   }
   
   const filteredProducts = useMemo(() => {
-    let filtered = products.filter(product => product.category === categoryName);
+    // Debug: Log the products and category name
+    console.log('All products:', products.length);
+    console.log('Category name:', categoryName);
+    console.log('Products in category:', products.filter(p => p.category === categoryName).length);
+    
+    let filtered = products.filter(product => {
+      return product.category === categoryName;
+    });
+      // Filter products by category
+      return product.category === categoryName;
+    });
 
     // Apply search filter
     if (searchQuery.trim()) {

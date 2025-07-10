@@ -34,7 +34,7 @@ interface StoreState {
 export const useStore = create<StoreState>()(
   persist(
     (set, get) => ({
-      products: demoProducts,
+      products: demoProducts, // This should load our new demo data
       user: {
         id: 'user-1',
         name: 'John Doe',
@@ -319,7 +319,7 @@ export const useStore = create<StoreState>()(
       }
     }),
     {
-      name: 'miles-shop-storage',
+      name: 'miles-shop-storage-v2', // Changed storage key to force reload
       partialize: (state) => ({
         products: state.products,
         user: state.user,
